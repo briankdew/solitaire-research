@@ -11,9 +11,9 @@ A systematic study of Klondike solitaire, working up from deliberately tiny ("ab
 | Folder | Contents |
 |---|---|
 | `notes/` | `solitaire-notes.md`: definitions, rules, notation, per-setup results and diagram conventions. `shuffle-type-catalog.md`: deal/outcome characteristics, shuffle types and the hypotheses tested against each setup |
-| `solver/` | `solitaire-solver3.py`: current solver (draws, counting mode). `solitaire-solver2.py`: previous version (no draws). `shuffle_types.py`: shuffle-type analysis. `legacy/`: the first single-suit solver |
+| `solver/` | `solitaire-solver3.py`: current solver (draws, counting mode). `solitaire-solver2.py`: previous version (no draws). `shuffle_types.py`: shuffle-type analysis. `sampling.py`: random-shuffle samples and 95% intervals. `calibrate.py`: checks the sampling method against a fully solved setup. `legacy/`: the first single-suit solver |
 | `pages/` | `solitaire-play-diagrams.html`: the play-diagram viewer (open in a browser). `vertical-mock.html`: the layout mock-up |
-| `data/` | Small result files kept in the repository (game list for 2223, shuffle types for 3223) |
+| `data/` | Small result files kept in the repository (game list for 2223, shuffle types and exact per-shuffle table for 3223) |
 
 ## Running the solver
 
@@ -31,7 +31,13 @@ python3 solver/shuffle_types.py 3223.json
 
 prints each shuffle's deal and outcome characteristics and groups the shuffles into shuffle types.
 
-For larger setups (e.g. 6223, 6233) building every game is impractical; use the counting mode `stats()` in `solitaire-solver3.py`, which returns games, wins, losses, fewest win and longest game per shuffle without building the tree.
+For larger setups (e.g. 6223, 6233) building every game is impractical; use the counting mode `stats()` in `solitaire-solver3.py`, which returns games, wins, losses, fewest win and longest game per shuffle without building the tree. To sample:
+
+```bash
+python3 solver/sampling.py 6223 10000 1 sample-6223.csv
+```
+
+(setup, sample size, seed, output table).
 
 ## Generated data
 

@@ -14,7 +14,7 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
 
 ## Next steps (in order)
 1. **Limited cognates 6223 and 6233** (same 12 cards; 2 columns vs 3). Agreed plan:
-   - Calibrate sampling on 3223 (all 360 known): compare sample estimates with the exact answers
+   - ~~Calibrate sampling on 3223~~ done: intervals hold their 95% coverage (see "Sampling" in the notes); `solver/sampling.py` is ready for the 10k samples
    - Discovery sample: 10,000 random shuffles each of 6223 and 6233 (fixed seed, results stored as a table)
    - Find patterns with the catalog's deal characteristics; confirm them on a second, independent 10,000 of each
    - Report margins of error; use medians/percentiles for heavy-tailed counts (games per shuffle)
@@ -30,4 +30,5 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
 - Winnability characteristic: H1 predicts fewest plays only; H4/H5 are trends, not rules
 
 ## Session log
+- 2026-11-14: sampling method calibrated on 3223
 - 2026-11-11 → 11-14: definitions and notation; A113–4113; diagram styling (horizontal, then vertical layout); 2223 and 3223; mirrors; shuffle-type catalog; draw handling; repository created

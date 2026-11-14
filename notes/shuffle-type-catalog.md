@@ -71,5 +71,6 @@ Notes:
 ---
 
 ## Change log
+- 2026-11-14 — D1–D4 now also computed directly from the deal (`solver/sampling.py`); they reproduce every 3223 figure for H1, H4 and H5
 - 2026-11-14 — 3223 analysed (360 shuffles, 164 types). H1 restated as a lower bound (exact in 85% of 3223). H3 reinterpreted as early freedom. Added H4 (aces exposed → winnable), H5 (blocking cards), H6 (deciding choices; first seen in 3223)
 - 2026-11-14 — Catalog started from the 2223 analysis (T1–T3, D1–D4, O1–O4, H1–H3). D1 generalised to any pile after 3223-1

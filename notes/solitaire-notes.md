@@ -88,6 +88,17 @@ A setup [H][S][C][3] is a **limited cognate** of K473 when:
 - Counting mode `stats()`: games, wins, losses, fewest win, longest game per shuffle without building the tree; matches full trees on all 3223 shuffles and 600 sampled 4223/5223 shuffles. About 1–2 ms per 6223/6233 shuffle
 - Scale: 6223 and 6233 each have 239,500,800 shuffles after mirrors (~3 days single-threaded in counting mode); diagrams/type analysis need full trees, which can reach millions of games for one shuffle
 
+## Sampling (for setups too large to solve every shuffle)
+- `solver/sampling.py`: draws a shuffle by shuffling the full deck uniformly and keeping the first instance of its mirror class (all mirror classes are the same size, so mirror-removed shuffles are sampled uniformly); with replacement. Each shuffle becomes one table row: order, D1–D4, stock size, games, wins, losses, winnable, fewest, most
+- 95% intervals: proportions by Wilson score; means by normal approximation; medians/percentiles by a distribution-free order-statistic (binomial) interval
+- D1 counts blocking cards in the waste and the columns (face-down cards included); the stock is not yet counted as a pile (it is empty in 3223)
+- **Calibration on 3223** (`solver/calibrate.py`; exact table `data/exact-3223.csv`): counting mode reproduces all totals (14,191 games, 13,968 W, 223 L, 293 winnable). The sampler reaches all 360 shuffles uniformly (360,000 draws: chi-square 357 on 359 df). 2,000 samples at each of n = 50, 100, 200, 500, 1000:
+  - Proportions (winnable, H1 equality, winnable by D4 and D1 level): coverage 94–96% at every n
+  - Mean games per shuffle: coverage 92% at n = 50, 94% at 100, 95–96% from 200 on (heavy tail; fine at 10,000)
+  - Median and 90th percentile of games: coverage 96–99% (conservative because counts tie)
+  - Mean error at n = 1000: winnable ±1.0 points, mean games ±1.3, median games ±0.7
+  - Expected 95% margins at n = 10,000: about ±1 percentage point for any proportion over the whole sample (wider for subgroups: ±1.96·√(p(1−p)/m) for a subgroup of m)
+
 ## Purpose
 Build a knowledge base of played games for analysis.
 

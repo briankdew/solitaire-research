@@ -1,0 +1,459 @@
+<title>Solitaire Rule Player</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&text=A23456789XJQK10%E2%99%A0%E2%99%A5%E2%99%A3%E2%99%A6&display=swap">
+<style>
+/* Layout: a card table (felt) with the board on the left and a control rail on the right; one deliberate dark look. */
+:root {
+  color-scheme: dark;
+  --felt: #2b634f; --felt-deep: #214f40; --felt-hi: #33735c;
+  --ink: #eef3ec; --ink-dim: #b9cdc2; --line: rgba(238, 243, 236, .26); --slot: rgba(238, 243, 236, .07);
+  --card: #fbf9f3; --card-edge: #d9d3c4; --red: #c4233b; --black: #1d1d1f; --back: #85213a; --back-hi: #9c2b47;
+  --gold: #e6b552; --win: #8fd6a4; --loss: #f0a39a; --panel: rgba(16, 48, 38, .55);
+  --display: "Bodoni Moda", "Didot", Georgia, serif;
+  --ui: "Jost", "Futura", "Trebuchet MS", system-ui, sans-serif;
+  --cardfont: "Libertinus Mono", "Libertinus Serif", Georgia, serif;
+}
+html { background: var(--felt-deep); }
+body { min-height: 100vh; }
+body { background: radial-gradient(ellipse at 30% 10%, var(--felt-hi), var(--felt) 45%, var(--felt-deep)); background-attachment: fixed;
+  color: var(--ink); font: 15px/1.45 var(--ui); }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 2.5rem; max-width: 76rem; margin: 0 auto;
+  padding-block: 1.5rem 3rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 860px) { .app { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } }
+main { min-width: 0; }
+h1 { font: 600 2.4rem/1.05 var(--display); margin: 0; letter-spacing: .005em; text-wrap: balance; }
+.sub { font: 500 .78rem var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); margin: .55rem 0 0; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 1rem 0 .8rem; }
+.statusrow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; min-height: 1.5rem; }
+.status b.W { color: var(--win); } .status b.L, .status b.S { color: var(--loss); }
+.solver { color: var(--ink-dim); font-size: .88rem; }
+#tablewrap { margin-top: .6rem; }
+#table { position: relative; }
+.lab { position: absolute; font: italic 500 1.05rem var(--ui); color: var(--ink-dim); text-align: center; }
+.lab small { font-style: normal; font-size: .75rem; opacity: .8; margin-left: .25em; }
+.slot { position: absolute; border: 1px solid var(--line); border-radius: 8%/5.7%; background: var(--slot);
+  display: grid; place-items: center; font-family: var(--cardfont); color: rgba(238, 243, 236, .35); }
+.slot.dash { border-style: dashed; background: none; }
+.card { position: absolute; border-radius: 8%/5.7%; background: var(--card); border: 1px solid var(--card-edge);
+  box-shadow: 0 1px 2px rgba(0,0,0,.25), 0 3px 8px rgba(0,0,0,.18); font-family: var(--cardfont); overflow: hidden; }
+.card.red { color: var(--red); } .card.black { color: var(--black); }
+.card.back { background-color: var(--back); background-image: repeating-linear-gradient(45deg, transparent 0 5px, rgba(255,255,255,.08) 5px 6px),
+  repeating-linear-gradient(-45deg, transparent 0 5px, rgba(255,255,255,.08) 5px 6px); border: 3px solid var(--card); }
+.card.back.thin { border-width: 2px; }
+.card.covered { background: #ece8dc; }
+.card.hl { outline: 3px solid var(--gold); outline-offset: -2px; }
+.card .idx { position: absolute; left: 7%; top: 3%; text-align: center; line-height: .95; }
+.card .idx.br { left: auto; top: auto; right: 7%; bottom: 3%; transform: rotate(180deg); }
+.card .pip { position: absolute; transform: translate(-50%, -50%); line-height: 1; }
+.card .pip.flip { transform: translate(-50%, -50%) rotate(180deg); }
+.card .court { position: absolute; inset: 20% 19%; border: 1px solid currentColor; opacity: .9; display: grid; place-items: center; line-height: 1; text-align: center; }
+.stack { box-shadow: 2px 2px 0 var(--card-edge), 3px 3px 0 rgba(0,0,0,.2), 0 3px 8px rgba(0,0,0,.2); }
+.badge { position: absolute; transform: translate(-50%, 0); font: 600 .72rem var(--ui); background: var(--felt-deep); border: 1px solid var(--line);
+  border-radius: 1rem; padding: 0 .45rem; color: var(--ink); }
+/* playback */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: 1rem; }
+button, select, input { font: 500 .92rem var(--ui); color: var(--ink); }
+button { background: var(--panel); border: 1px solid var(--line); border-radius: .4rem; padding: .4rem .75rem; cursor: pointer; }
+button:hover:not(:disabled) { background: rgba(16,48,38,.85); border-color: rgba(238,243,236,.45); }
+button:disabled { opacity: .4; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+button.primary { background: var(--back); border-color: var(--back-hi); }
+button.primary:hover:not(:disabled) { background: var(--back-hi); }
+.bar .count { margin-left: auto; color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+select, input[type=number], input[type=text] { background: var(--panel); border: 1px solid var(--line); border-radius: .4rem; padding: .35rem .5rem; min-width: 0; }
+.decision { margin-top: 1rem; background: var(--panel); border: 1px solid var(--line); border-radius: .6rem; padding: .7rem .9rem; }
+.decision h2, aside h2 { font: 500 .72rem var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); margin: 0 0 .35rem; }
+.decision .last { font-size: 1rem; }
+.decision .last .act { font-family: var(--cardfont); font-size: 1.1rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .55rem; }
+.chip { border: 1px solid var(--line); border-radius: 1rem; padding: .1rem .6rem; font-size: .85rem; }
+.chip .c { font-family: var(--cardfont); }
+.chip .r { color: var(--ink-dim); font-size: .75rem; margin-left: .3rem; }
+.chip.chosen { border-color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); }
+.logwrap { margin-top: 1rem; max-height: 22rem; overflow: auto; border: 1px solid var(--line); border-radius: .6rem; }
+table.log { border-collapse: collapse; width: 100%; font-size: .86rem; font-variant-numeric: tabular-nums; }
+table.log th { position: sticky; top: 0; background: var(--felt-deep); text-align: left; font-weight: 500; color: var(--ink-dim); padding: .35rem .6rem; }
+table.log td { padding: .25rem .6rem; border-top: 1px solid rgba(238,243,236,.08); white-space: nowrap; }
+table.log td.act { font-family: var(--cardfont); }
+table.log tr { cursor: pointer; } table.log tr.cur td { background: rgba(230,181,82,.16); }
+table.log tbody tr:hover td { background: rgba(238,243,236,.06); }
+/* rail */
+aside { display: flex; flex-direction: column; gap: 1.3rem; min-width: 0; }
+.grid2 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .45rem .8rem; align-items: center; }
+.grid2 label { font: 500 .72rem var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.row { display: flex; gap: .4rem; align-items: center; }
+.row > input { flex: 1; width: 0; }
+.note { color: var(--ink-dim); font-size: .82rem; margin: .3rem 0 0; }
+.rules { display: flex; flex-direction: column; gap: .3rem; }
+.rulei { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .5rem; align-items: start; padding: .35rem .45rem; border-radius: .4rem; border: 1px solid transparent; }
+.rulei.on { border-color: var(--line); background: var(--panel); }
+.rulei input { margin-top: .25rem; accent-color: var(--gold); }
+.rulei .nm { font-weight: 500; } .rulei .ds { display: block; font-size: .78rem; color: var(--ink-dim); }
+.rulei .mv { display: flex; gap: .15rem; } .rulei .mv button { padding: .05rem .35rem; font-size: .8rem; }
+.batch .sum { margin-top: .5rem; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.batch table { border-collapse: collapse; font-size: .8rem; margin-top: .5rem; width: 100%; font-variant-numeric: tabular-nums; }
+.batch td, .batch th { padding: .15rem .3rem; text-align: right; } .batch th { color: var(--ink-dim); font-weight: 500; }
+.batch td:first-child, .batch th:first-child { text-align: left; }
+.lostlist { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .5rem; max-height: 9rem; overflow: auto; }
+.lostlist button { padding: .1rem .45rem; font-size: .8rem; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="app">
+<main>
+  <h1>Solitaire Rule Player</h1>
+  <p class="sub" id="sub"></p>
+  <hr class="rule">
+  <div class="statusrow"><span class="status" id="status"></span><span class="solver" id="solver"></span></div>
+  <div id="tablewrap"><div id="table"></div></div>
+  <div class="bar">
+    <button id="bStart" title="Back to the deal">⏮</button>
+    <button id="bBack" title="Step back">◀</button>
+    <button id="bPlay" class="primary">Play</button>
+    <button id="bStep" title="Step forward">▶</button>
+    <button id="bEnd" title="Jump to the end">⏭</button>
+    <select id="speed" aria-label="Speed">
+      <option value="1600">Slow</option><option value="800" selected>Normal</option><option value="300">Fast</option><option value="80">Very fast</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+  <section class="decision">
+    <h2>Decision</h2>
+    <div class="last" id="last"></div>
+    <div class="chips" id="chips"></div>
+  </section>
+  <div class="logwrap"><table class="log"><thead><tr><th>#</th><th>Action</th><th>Degree</th><th>Decision</th><th>Rules matched</th></tr></thead><tbody id="log"></tbody></table></div>
+</main>
+
+<aside>
+  <section>
+    <div class="grid2">
+      <label for="selHigh">High card</label><select id="selHigh"></select>
+      <label for="selSuits">Suits</label><select id="selSuits"><option value="1">1 ♠</option><option value="2">2 ♠♥</option><option value="3">3 ♠♥♣</option><option value="4">4 ♠♥♣♦</option></select>
+      <label for="selCols">Columns</label><select id="selCols"></select>
+      <label for="selDraw">Draw</label><select id="selDraw"><option>1</option><option>2</option><option>3</option></select>
+    </div>
+  </section>
+  <section>
+    <h2>Shuffle</h2>
+    <div class="grid2">
+      <label for="selSet">Set</label><select id="selSet"></select>
+      <label for="num" id="numLab">Number</label>
+      <div class="row" id="numRow"><button id="prev" aria-label="Previous shuffle">‹</button><input id="num" type="number" min="1" value="1"><button id="next" aria-label="Next shuffle">›</button></div>
+    </div>
+    <div class="row" id="customRow" hidden style="margin-top:.45rem"><input id="custom" type="text" placeholder="e.g. A♠ 6♥ 4♠ … or As 6h 4s …" aria-label="Shuffle order"><button id="useCustom">Deal</button></div>
+    <p class="note" id="orderNote"></p>
+  </section>
+  <section>
+    <h2>Random choices</h2>
+    <div class="row"><label class="note" for="seed" style="margin:0">Seed</label><input id="seed" type="number" value="1"><button id="newSeed">New seed</button></div>
+    <p class="note">The player picks at random among the options the active rules leave. The same seed replays the same game.</p>
+  </section>
+  <section>
+    <h2>Rules (active ones apply in this order)</h2>
+    <div class="rules" id="rules"></div>
+  </section>
+  <section class="batch">
+    <h2>Play the whole set</h2>
+    <div class="row"><label class="note" for="runs" style="margin:0">Games per shuffle</label><input id="runs" type="number" min="1" max="1000" value="1"><button id="runBatch" class="primary">Run</button></div>
+    <div id="batchOut" class="sum"><p class="note" style="margin:0">Plays every shuffle in the set with the active rules and scores each game against the solver.</p></div>
+  </section>
+</aside>
+</div>
+
+<script>
+/*__ENGINE__*/
+</script>
+<script>
+"use strict";
+const E = window.SolitaireEngine, SOLVED = /*__DATA__*/null;
+const $ = id => document.getElementById(id);
+const DEFAULT_ORDER = ["R8", "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R9"];
+const st = { cfg: null, set: "all", idx: 0, order: null, steps: [], cur: 0, timer: null,
+             ruleOrder: DEFAULT_ORDER.slice(), active: new Set(), batchToken: 0 };
+
+// ---------- setup ----------
+for (const r of "23456789XJQK") $("selHigh").add(new Option(r === "X" ? "10" : r, r));
+$("selHigh").add(new Option("A", "A"), 0);
+for (let c = 1; c <= 7; c++) $("selCols").add(new Option(c, c));
+function setCode(code) { $("selHigh").value = code[0]; $("selSuits").value = code[1]; $("selCols").value = code[2]; $("selDraw").value = code[3]; }
+function readCode() { return $("selHigh").value + $("selSuits").value + $("selCols").value + $("selDraw").value; }
+function rankName(r) { return r === "X" ? "10" : r; }
+function setsFor(code) { return SOLVED[code] ? Object.keys(SOLVED[code]) : []; }
+const SET_NAMES = { all: "Every shuffle", discovery: "Discovery sample", confirmation: "Confirmation sample", random: "Random", custom: "Custom order" };
+function unpack(s) { return s.match(/../g); }
+function lookup(order) {
+  const key = order.join("");
+  for (const set of setsFor(st.cfg.code)) { const r = SOLVED[st.cfg.code][set].find(x => x[0] === key); if (r) return r; }
+  return null;
+}
+
+function onCode() {
+  stop();
+  st.cfg = E.parseCode(readCode());
+  const deck = E.deckOf(st.cfg);
+  $("sub").textContent = `Setup ${st.cfg.code} · ${deck.length} cards · ${st.cfg.ncols} column${st.cfg.ncols > 1 ? "s" : ""} · draw ${st.cfg.draw} · empty column takes a ${rankName(st.cfg.high)}`;
+  const sel = $("selSet"); sel.innerHTML = "";
+  for (const s of setsFor(st.cfg.code).concat(["random", "custom"])) sel.add(new Option(SET_NAMES[s], s));
+  st.set = sel.value = setsFor(st.cfg.code)[0] || "random"; st.idx = 0;
+  onSet();
+}
+function onSet() {
+  st.set = $("selSet").value;
+  const sized = st.set !== "random" && st.set !== "custom";
+  $("numLab").textContent = st.set === "random" ? "Shuffle seed" : "Number";
+  $("numLab").hidden = $("numRow").hidden = st.set === "custom";
+  $("customRow").hidden = st.set !== "custom";
+  $("num").max = sized ? SOLVED[st.cfg.code][st.set].length : "";
+  $("num").value = st.idx + 1;
+  loadShuffle();
+}
+function loadShuffle() {
+  stop();
+  if (st.set === "custom") {
+    const o = E.parseOrder($("custom").value, st.cfg);
+    st.order = o || null;
+    $("orderNote").textContent = o ? "" : `Enter all ${E.deckOf(st.cfg).length} cards of the deck in order.`;
+    if (!o) { st.steps = []; render(); return; }
+  } else if (st.set === "random") {
+    st.order = E.randomOrder(st.cfg, E.rng32(0x51ed ^ (st.idx + 1) * 2654435761));
+  } else {
+    const rows = SOLVED[st.cfg.code][st.set];
+    st.idx = Math.max(0, Math.min(rows.length - 1, st.idx));
+    st.order = unpack(rows[st.idx][0]);
+  }
+  $("num").value = st.idx + 1;
+  $("orderNote").textContent = st.order ? st.order.map(c => rankName(c[0]) + c[1]).join(" ") : "";
+  replay(0);
+}
+function activeList() { return st.ruleOrder.filter(id => st.active.has(id)); }
+function replay(keepAt) {
+  if (!st.order) return;
+  const g = E.play(st.order, st.cfg, activeList(), +$("seed").value || 0);
+  st.steps = g.steps; st.game = g; st.cur = Math.min(keepAt, st.steps.length - 1);
+  renderLog(); render();
+}
+
+// ---------- cards ----------
+const PIPS = {
+  1: [[50, 50]], 2: [[50, 20], [50, 80]], 3: [[50, 20], [50, 50], [50, 80]],
+  4: [[30, 20], [70, 20], [30, 80], [70, 80]], 5: [[30, 20], [70, 20], [50, 50], [30, 80], [70, 80]],
+  6: [[30, 20], [70, 20], [30, 50], [70, 50], [30, 80], [70, 80]],
+  7: [[30, 20], [70, 20], [50, 35], [30, 50], [70, 50], [30, 80], [70, 80]],
+  8: [[30, 20], [70, 20], [50, 35], [30, 50], [70, 50], [50, 65], [30, 80], [70, 80]],
+  9: [[30, 20], [70, 20], [30, 40], [70, 40], [50, 50], [30, 60], [70, 60], [30, 80], [70, 80]],
+  10: [[30, 20], [70, 20], [50, 30], [30, 40], [70, 40], [30, 60], [70, 60], [50, 70], [30, 80], [70, 80]],
+};
+function cardEl(c, x, y, cw, opts = {}) {
+  const d = document.createElement("div");
+  d.style.cssText = `left:${x}px;top:${y}px;width:${cw}px;height:${cw * 1.4}px`;
+  if (!c) { d.className = "card back" + (cw < 60 ? " thin" : ""); return d; }
+  const isRed = c[1] === "♥" || c[1] === "♦", r = rankName(c[0]), n = E.RANKS.indexOf(c[0]) + 1;
+  d.className = "card " + (isRed ? "red" : "black") + (opts.hl ? " hl" : "");
+  d.setAttribute("aria-label", r + c[1]);
+  const fs = cw * 0.2;
+  let h = `<div class="idx" style="font-size:${fs}px">${r}<br>${c[1]}</div>`;
+  if (!opts.corner && cw >= 64) {
+    h += `<div class="idx br" style="font-size:${fs}px">${r}<br>${c[1]}</div>`;
+    if (n >= 11) h += `<div class="court" style="font-size:${cw * 0.3}px">${r}<br>${c[1]}</div>`;
+    else for (const [px, py] of PIPS[n]) h += `<span class="pip${py > 50 ? " flip" : ""}" style="left:${px}%;top:${py}%;font-size:${n === 1 ? cw * 0.42 : cw * 0.19}px">${c[1]}</span>`;
+  } else if (!opts.corner) h += `<span class="pip" style="left:56%;top:60%;font-size:${cw * 0.5}px">${c[1]}</span>`;
+  d.innerHTML = h; return d;
+}
+function slotEl(x, y, cw, text = "", dash = false) {
+  const d = document.createElement("div");
+  d.className = "slot" + (dash ? " dash" : "");
+  d.style.cssText = `left:${x}px;top:${y}px;width:${cw}px;height:${cw * 1.4}px;font-size:${cw * 0.3}px`;
+  d.textContent = text; return d;
+}
+function labEl(text, x, y, w, small) {
+  const d = document.createElement("div"); d.className = "lab";
+  d.style.cssText = `left:${x}px;top:${y}px;width:${w}px`;
+  d.innerHTML = text + (small != null ? `<small>${small}</small>` : ""); return d;
+}
+
+// ---------- table ----------
+function renderTable(s) {
+  const T = $("table"); T.innerHTML = "";
+  if (!s) { T.style.height = "0"; return; }
+  const { ncols, nsuits, high } = st.cfg;
+  const avail = $("tablewrap").clientWidth;
+  const colsU = ncols + (ncols - 1) * 0.18, topU = 1 + 0.18 + 1.6 + 0.36 + nsuits + (nsuits - 1) * 0.18;
+  const cw = Math.min(100, Math.floor(avail / Math.max(colsU, topU)));
+  const ch = cw * 1.4, gap = cw * 0.18, fan = cw * 0.3, L = 24;
+  const W = Math.max(Math.max(colsU, topU) * cw, Math.min(avail, 7 * cw + 6 * gap));   // full table width, as with 7 columns
+  const hl = new Set(s.last ? (s.last.moved || s.last.draw || []) : []);
+  T.style.width = W + "px";
+  // stock
+  T.append(labEl("s", 0, 0, cw, s.stock.length ? s.stock.length : null));
+  if (s.stock.length) { const b = cardEl(null, 0, L, cw); b.classList.add("stack"); T.append(b); }
+  else T.append(slotEl(0, L, cw, "↻"));
+  // waste
+  const wx = cw + gap, vis = s.fan > 0 ? s.waste.slice(-s.fan) : s.waste.slice(-1), hidden = s.waste.length - vis.length;
+  T.append(labEl("w", wx, 0, cw + 2 * fan, s.waste.length ? s.waste.length : null));
+  for (let i = 0; i < 3; i++) T.append(slotEl(wx + i * fan, L, cw, "", true));
+  if (hidden > 0) { const c = cardEl(s.waste[0], wx, L, cw); c.className = "card covered stack"; c.innerHTML = ""; T.append(c); }
+  vis.forEach((c, i) => T.append(cardEl(c, wx + i * fan, L, cw, { hl: hl.has(c), corner: i < vis.length - 1 && cw < 64 })));
+  // home
+  const hx0 = W - nsuits * cw - (nsuits - 1) * gap;
+  T.append(labEl("h", hx0, 0, W - hx0));
+  for (let k = 0; k < nsuits; k++) {
+    const x = hx0 + k * (cw + gap), h = s.home[k];
+    if (h) T.append(cardEl(E.RANKS[h - 1] + E.SUITS[k], x, L, cw, { hl: hl.has(E.RANKS[h - 1] + E.SUITS[k]) }));
+    else T.append(slotEl(x, L, cw, "A" + E.SUITS[k]));
+  }
+  // columns
+  const y0 = L + ch + cw * 0.35, cy = y0 + L, colW = ncols * cw + (ncols - 1) * gap, cx0 = (W - colW) / 2;
+  const offD = ch * 0.1, offU = ch * 0.24;
+  let bottom = cy + ch;
+  s.cols.forEach((col, i) => {
+    const x = cx0 + i * (cw + gap);
+    T.append(labEl(E.COLS[i], x, y0, cw));
+    if (!col.down.length && !col.up.length) { T.append(slotEl(x, cy, cw, rankName(high))); return; }
+    let y = cy;
+    col.down.forEach(() => { T.append(cardEl(null, x, y, cw)); y += offD; });
+    col.up.forEach((c, j) => { T.append(cardEl(c, x, y, cw, { hl: hl.has(c) })); if (j < col.up.length - 1) y += offU; });
+    bottom = Math.max(bottom, y + ch);
+  });
+  T.style.height = bottom + 8 + "px";
+}
+
+// ---------- decision panel, log ----------
+const fmt = a => a.replace(/X/g, "10");
+const deg = d => d === "p2" ? "p²" : d === "p1" ? "p¹" : "";
+function rulesFor(o, opts) {
+  return E.RULES.filter(r => { const k = r.keep(opts); return k.length && k.length < opts.length && k.includes(o); }).map(r => r.id);
+}
+function render() {
+  const s = st.steps.length ? st.steps[st.cur].state : null;
+  renderTable(s);
+  const n = st.steps.length - 1;
+  $("count").textContent = st.steps.length ? `Step ${st.cur} of ${n}` : "";
+  ["bStart", "bBack"].forEach(b => $(b).disabled = !st.steps.length || st.cur === 0);
+  ["bStep", "bEnd", "bPlay"].forEach(b => $(b).disabled = !st.steps.length || st.cur === n);
+  if (!s) { $("status").textContent = "No shuffle loaded."; $("last").textContent = ""; $("chips").innerHTML = ""; $("solver").textContent = ""; return; }
+  const g = st.game;
+  if (s.over) $("status").innerHTML = `<b class="${s.over.result}">${s.over.result === "W" ? "Won" : s.over.result === "L" ? "Lost" : "Stopped"}</b>: ${s.over.why}`;
+  else $("status").textContent = `Pass ${s.pass} · ${s.plays} play${s.plays === 1 ? "" : "s"} · ${s.playsThisPass} this pass`;
+  const sv = lookup(st.order);
+  $("solver").textContent = sv ? (sv[1] ? `Solver: winnable, fewest ${sv[2]} plays, ${sv[3].toLocaleString()} games` : `Solver: not winnable (${sv[3].toLocaleString()} games)`) : "Solver: no result for this shuffle";
+  const step = st.steps[st.cur];
+  if (st.cur === 0) $("last").innerHTML = `Dealt. ${g.result === "W" ? "This game is won" : "This game is lost"} at step ${n}.`;
+  else $("last").innerHTML = `${st.cur}. <span class="act">${fmt(step.choice.label)}</span> ${deg(step.choice.degree)} · ${step.how}${step.tag ? " · " + step.tag : ""}`;
+  const nextStep = st.steps[st.cur + 1];
+  const chips = $("chips"); chips.innerHTML = "";
+  if (nextStep) {
+    const lab = document.createElement("span"); lab.className = "note"; lab.style.margin = "0 .2rem 0 0"; lab.textContent = "Options now:"; chips.append(lab);
+    for (const o of nextStep.options) {
+      const c = document.createElement("span"); c.className = "chip" + (o === nextStep.choice ? " chosen" : "");
+      const rs = rulesFor(o, nextStep.options);
+      c.innerHTML = `<span class="c">${fmt(o.label)}</span>${o.degree === "p2" ? " p²" : ""}${rs.length ? `<span class="r">${rs.join(" ")}</span>` : ""}`;
+      if (o === nextStep.choice) c.title = "The player's next choice";
+      chips.append(c);
+    }
+  }
+  document.querySelectorAll("#log tr").forEach(tr => tr.classList.toggle("cur", +tr.dataset.i === st.cur));
+  const cur = document.querySelector("#log tr.cur");
+  if (cur) { const w = cur.closest(".logwrap"); const t = cur.offsetTop - w.clientHeight / 2; w.scrollTop = Math.max(0, t); }
+}
+function renderLog() {
+  const tb = $("log"); tb.innerHTML = "";
+  const tr0 = document.createElement("tr"); tr0.dataset.i = 0; tr0.innerHTML = `<td>0</td><td class="act">deal</td><td></td><td></td><td></td>`; tb.append(tr0);
+  st.steps.slice(1).forEach((s, k) => {
+    const tr = document.createElement("tr"); tr.dataset.i = k + 1;
+    const drawn = s.state.last && s.state.last.draw ? ` <span style="color:var(--ink-dim)">${fmt(s.state.last.draw.join(" "))}</span>` : "";
+    tr.innerHTML = `<td>${k + 1}</td><td class="act">${fmt(s.choice.label)}${drawn}</td><td>${deg(s.choice.degree)}</td><td>${s.how}</td><td>${s.tag}</td>`;
+    tb.append(tr);
+  });
+}
+$("log").addEventListener("click", e => { const tr = e.target.closest("tr"); if (tr) { stop(); st.cur = +tr.dataset.i; render(); } });
+
+// ---------- playback ----------
+function stop() { if (st.timer) { clearInterval(st.timer); st.timer = null; } $("bPlay").textContent = "Play"; }
+function go(i) { st.cur = Math.max(0, Math.min(st.steps.length - 1, i)); render(); }
+$("bStart").onclick = () => { stop(); go(0); };
+$("bBack").onclick = () => { stop(); go(st.cur - 1); };
+$("bStep").onclick = () => { stop(); go(st.cur + 1); };
+$("bEnd").onclick = () => { stop(); go(st.steps.length - 1); };
+$("bPlay").onclick = () => {
+  if (st.timer) { stop(); return; }
+  $("bPlay").textContent = "Pause"; $("bPlay").disabled = false;
+  st.timer = setInterval(() => { if (st.cur >= st.steps.length - 1) { stop(); render(); return; } go(st.cur + 1); $("bPlay").disabled = false; }, +$("speed").value);
+};
+$("speed").onchange = () => { if (st.timer) { stop(); $("bPlay").onclick(); } };
+
+// ---------- controls ----------
+["selHigh", "selSuits", "selCols", "selDraw"].forEach(id => $(id).onchange = onCode);
+$("selSet").onchange = () => { st.idx = 0; onSet(); };
+$("num").onchange = () => { st.idx = (+$("num").value || 1) - 1; loadShuffle(); };
+$("prev").onclick = () => { st.idx = Math.max(0, st.idx - 1); loadShuffle(); };
+$("next").onclick = () => { st.idx++; loadShuffle(); };
+$("useCustom").onclick = loadShuffle;
+$("custom").addEventListener("keydown", e => { if (e.key === "Enter") loadShuffle(); });
+$("seed").onchange = () => { stop(); replay(0); };
+$("newSeed").onclick = () => { $("seed").value = (+$("seed").value || 0) + 1; stop(); replay(0); };
+window.addEventListener("resize", () => render());
+
+function renderRules() {
+  const box = $("rules"); box.innerHTML = "";
+  st.ruleOrder.forEach((id, i) => {
+    const r = E.RULES.find(x => x.id === id), on = st.active.has(id);
+    const d = document.createElement("div"); d.className = "rulei" + (on ? " on" : "");
+    d.innerHTML = `<input type="checkbox" id="rule-${id}" ${on ? "checked" : ""}>
+      <label for="rule-${id}"><span class="nm">${id} ${r.name}</span><span class="ds">${r.desc}</span></label>
+      <span class="mv"><button aria-label="Move ${id} up" ${i === 0 ? "disabled" : ""}>↑</button><button aria-label="Move ${id} down" ${i === st.ruleOrder.length - 1 ? "disabled" : ""}>↓</button></span>`;
+    d.querySelector("input").onchange = e => { e.target.checked ? st.active.add(id) : st.active.delete(id); renderRules(); stop(); replay(st.cur); };
+    const [up, dn] = d.querySelectorAll(".mv button");
+    up.onclick = () => { [st.ruleOrder[i - 1], st.ruleOrder[i]] = [st.ruleOrder[i], st.ruleOrder[i - 1]]; renderRules(); if (on) { stop(); replay(st.cur); } };
+    dn.onclick = () => { [st.ruleOrder[i + 1], st.ruleOrder[i]] = [st.ruleOrder[i], st.ruleOrder[i + 1]]; renderRules(); if (on) { stop(); replay(st.cur); } };
+    box.append(d);
+  });
+}
+
+// ---------- batch ----------
+$("runBatch").onclick = () => {
+  const sets = setsFor(st.cfg.code);
+  const set = sets.includes(st.set) ? st.set : null;
+  const out = $("batchOut");
+  if (!set) { out.innerHTML = `<p class="note" style="margin:0">Choose a set with solver results (${sets.length ? sets.map(s => SET_NAMES[s]).join(", ") : "none for this setup"}).</p>`; return; }
+  const token = ++st.batchToken, rows = SOLVED[st.cfg.code][set], runs = Math.max(1, Math.min(1000, +$("runs").value || 1));
+  const active = activeList(), base = +$("seed").value || 0, cfg = st.cfg;
+  const res = { W: 0, Lw: 0, Lu: 0, S: 0 }, lost = [], tW = {}, tL = {};
+  let i = 0;
+  const step = () => {
+    if (token !== st.batchToken) return;
+    const t0 = performance.now();
+    while (i < rows.length && performance.now() - t0 < 30) {
+      const order = unpack(rows[i][0]); let firstLost = null;
+      for (let k = 0; k < runs; k++) {
+        const seed = base + i * runs + k, g = E.play(order, cfg, active, seed, false);
+        if (g.result === "W") res.W++; else if (g.result === "S") res.S++; else if (rows[i][1]) { res.Lw++; if (firstLost === null) firstLost = seed; } else res.Lu++;
+        const tt = g.result === "W" ? tW : (g.result === "L" && rows[i][1]) ? tL : null;
+        if (tt) for (const [id, [a, m]] of Object.entries(g.tally)) { const x = (tt[id] = tt[id] || [0, 0]); x[0] += a; x[1] += m; }
+      }
+      if (firstLost !== null) lost.push([i, firstLost]);
+      i++;
+    }
+    const n = i * runs, wn = rows.slice(0, i).filter(r => r[1]).length * runs;
+    const pct = (a, b) => b ? (100 * a / b).toFixed(1) + "%" : "–";
+    let h = `<div>${i < rows.length ? `Playing… ${i.toLocaleString()} of ${rows.length.toLocaleString()} shuffles` : `${SET_NAMES[set]}, ${runs} game${runs > 1 ? "s" : ""} per shuffle, rules: ${active.join(" › ") || "none (random)"}`}</div>
+      <div>Games ${n.toLocaleString()}: won <b>${res.W.toLocaleString()}</b> (${pct(res.W, n)})</div>
+      <div>Won of winnable: <b>${pct(res.W, wn)}</b></div>
+      <div>Lost but winnable ${res.Lw.toLocaleString()} · lost, not winnable ${res.Lu.toLocaleString()}${res.S ? ` · stopped ${res.S}` : ""}</div>`;
+    h += `<table><thead><tr><th>Rule</th><th>followed in won games</th><th>in lost winnable</th></tr></thead><tbody>`;
+    for (const r of E.RULES) { const a = tW[r.id], b = tL[r.id]; if (a || b) h += `<tr><td>${r.id}</td><td>${a ? pct(a[1], a[0]) : "–"}</td><td>${b ? pct(b[1], b[0]) : "–"}</td></tr>`; }
+    h += `</tbody></table>`;
+    if (lost.length) h += `<p class="note">Lost but winnable (open one to watch that game):</p><div class="lostlist">${lost.slice(0, 200).map(([k, sd]) => `<button data-k="${k}" data-s="${sd}">${set === "all" ? st.cfg.code + "-" : "#"}${k + 1}</button>`).join("")}${lost.length > 200 ? `<span class="note">+${lost.length - 200} more</span>` : ""}</div>`;
+    out.innerHTML = h;
+    out.querySelectorAll(".lostlist button").forEach(b => b.onclick = () => { $("selSet").value = set; st.set = set; st.idx = +b.dataset.k; $("seed").value = b.dataset.s; onSet(); });
+    if (i < rows.length) setTimeout(step, 0);
+  };
+  step();
+};
+
+// ---------- start ----------
+
+setCode("6223"); renderRules(); onCode();
+</script>

@@ -12,7 +12,8 @@ A systematic study of Klondike solitaire, working up from deliberately tiny ("ab
 |---|---|
 | `notes/` | `solitaire-notes.md`: definitions, rules, notation, per-setup results and diagram conventions. `shuffle-type-catalog.md`: deal/outcome characteristics, shuffle types and the hypotheses tested against each setup |
 | `solver/` | `solitaire-solver3.py`: current solver (draws, counting mode). `solitaire-solver2.py`: previous version (no draws). `shuffle_types.py`: shuffle-type analysis. `sampling.py`: random-shuffle samples and 95% intervals. `calibrate.py`: checks the sampling method against a fully solved setup. `summarize.py` / `compare.py`: summary of a sample table, and discovery vs confirmation comparison. `features.py` / `patterns.py`: candidate deal characteristics and the pattern search. `legacy/`: the first single-suit solver |
-| `pages/` | `solitaire-play-diagrams.html`: the play-diagram viewer (open in a browser). `vertical-mock.html`: the layout mock-up |
+| `player/` | `engine.js`: the rule-driven player (same rules as the solver; sees only what is visible). `page.html` + `build.py`: the Rule Player page. `run.js`: batch runs in Node. `crosscheck.*`: engine vs solver check |
+| `pages/` | `solitaire-play-diagrams.html`: the play-diagram viewer (open in a browser). `vertical-mock.html`: the layout mock-up. `solitaire-player.html`: the Rule Player (built) |
 | `data/` | Small result files kept in the repository (game list for 2223, shuffle types and exact per-shuffle table for 3223, 6223/6233 sample tables) |
 
 ## Running the solver

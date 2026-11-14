@@ -12,8 +12,9 @@
 | Page | URL | Source |
 |---|---|---|
 | Solitaire Play Diagrams | https://claude.ai/artifact/MdKigeMNb2CJehidHiZygh | `pages/solitaire-play-diagrams.html` |
+| Solitaire Rule Player | https://claude.ai/artifact/NY4GwDxqt6kcKYYWQsziRq | `player/page.html` + `player/engine.js`, built by `python3 player/build.py` into `pages/solitaire-player.html` |
 | Vertical Play Mock-up | https://claude.ai/artifact/R3726UuvVfB4FH9BoWuGxf | `pages/vertical-mock.html` |
 | Card Suit Fonts (comparison) | https://claude.ai/artifact/PzGVDrcgNJHR2psCoLeq8q | not in repo |
 | Notation Fonts (comparison) | https://claude.ai/artifact/3GmqEWtuQBSVyu2aTA5TVt | not in repo |
 
-To update a page from a new session, read it with the Artifact tool's `read` action (or start from the repo source), edit, and publish with the existing `url` so the link stays the same; then copy the source back into `pages/` and commit.
+To update a page from a new session, read it with the Artifact tool's `read` action (or start from the repo source), edit, and publish with the existing `url` so the link stays the same; then copy the source back into `pages/` and commit. For the Rule Player, edit `player/page.html` / `player/engine.js`, rebuild, and publish `pages/solitaire-player.html` with its `url`.

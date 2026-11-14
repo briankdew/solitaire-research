@@ -88,6 +88,17 @@ A setup [H][S][C][3] is a **limited cognate** of K473 when:
 - Counting mode `stats()`: games, wins, losses, fewest win, longest game per shuffle without building the tree; matches full trees on all 3223 shuffles and 600 sampled 4223/5223 shuffles. About 1–2 ms per 6223/6233 shuffle
 - Scale: 6223 and 6233 each have 239,500,800 shuffles after mirrors (~3 days single-threaded in counting mode); diagrams/type analysis need full trees, which can reach millions of games for one shuffle
 
+## Player (rule-driven play, no solver)
+- `player/engine.js`: plays a shuffle forward with the solver's rules (cross-checked against the solver: 1,050 deals, 35,812 positions, 14,473 draws, no difference; `player/crosscheck.js` | `crosscheck.py`)
+- **What the player sees (no memory):** face-up column cards and the number of face-down cards per column; the waste cards of the latest draw still on the waste (if none are left, the waste's top card); the top card of each home pile; the number of cards in the stock; the number of plays made so far in the current pass
+- **Actions:** every legal play, plus draw. A draw is one of the choices (it is a decision the player makes)
+- **Game end:** W when every card is home. L when no play and no draw is possible, or when the stock must be turned over after a full pass in which no play was made (pass limit). S (stopped) after 3,000 actions (safety; cannot happen with 2 suits)
+- **Decisions:** the active rules, in their order, each narrow the options (a rule is skipped when it would keep none or all of them); the player then picks at random (seeded) among what is left. Every decision is labelled with how it was made (only option / decided by rules / random of n) and with every rule it matches (the rule would have kept the chosen option) or goes against; a random choice that matches no rule is a "no-rule random" decision
+- **Starter rules** (tentative, to be replaced by the user's): R1 home, R2 A or 2 home, R3 reveal a face-down card, R4 empty a column, R5 high card to an empty column, R6 waste to column, R7 column to column, R8 play before drawing, R9 no detour (avoid p²)
+- **Scoring:** the solver's results are used only to score finished games: won / lost but winnable / lost, not winnable
+- Page: Solitaire Rule Player (see CLAUDE.md). Batch runs: `node player/run.js <set.csv> <code> [rules] [games per shuffle] [seed] [out.csv]`
+- First runs (seed 1): 3223, 100 games per shuffle: no rules 26.4% of winnable games won; R8 alone 92.2%; R8 › R1 88.6% (sending cards home first loses some winnable games, as H6 found). 6233 discovery, R8: 71.2% of winnable won
+
 ## Sampling (for setups too large to solve every shuffle)
 - `solver/sampling.py`: draws a shuffle by shuffling the full deck uniformly and keeping the first instance of its mirror class (all mirror classes are the same size, so mirror-removed shuffles are sampled uniformly); with replacement. Each shuffle becomes one table row: order, D1–D4, stock size, games, wins, losses, winnable, fewest, most
 - 95% intervals: proportions by Wilson score; means by normal approximation; medians/percentiles by a distribution-free order-statistic (binomial) interval

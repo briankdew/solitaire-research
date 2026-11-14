@@ -17,7 +17,8 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
    - ~~Calibrate sampling on 3223~~ done: intervals hold their 95% coverage (see "Sampling" in the notes); `solver/sampling.py` is ready for the 10k samples
    - ~~Discovery sample~~ done: 10,000 each (seeds 6223001, 6233001), tables in `data/`; headline results in the notes, H1/H3–H5 in the catalog
    - D1 now counts the stock (user decision: keep fine-grain detail for now; later reassess which characteristics a player can actually see and use)
-   - Find patterns with the catalog's deal characteristics; confirm them on a second, independent 10,000 of each
+   - ~~Confirmation~~ done: second 10,000 of each (seeds 6223002, 6233002); H1, H3–H5 confirmed (see the notes)
+   - Next: look for further patterns (new deal characteristics, combinations, what decides winnability), then confirm them the same way
    - Report margins of error; use medians/percentiles for heavy-tailed counts (games per shuffle)
 2. **Shuffle types at 6223/6233 scale**: T3 needs every line of play, but a single shuffle can have 10^5–10^7 games. Needs a way to compute lines/types without enumerating games (e.g. on the position graph)
 3. **Diagrams with draws**: solver children carry a `draws` count for waste plays; the diagrams don't show it yet (design decision for the user)
@@ -32,5 +33,5 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
 - Winnability characteristic: H1 predicts fewest plays only; H4/H5 are trends, not rules
 
 ## Session log
-- 2026-11-14: sampling method calibrated on 3223; 6223/6233 discovery samples
+- 2026-11-14: sampling method calibrated on 3223; 6223/6233 discovery and confirmation samples; D1 counts the stock
 - 2026-11-11 → 11-14: definitions and notation; A113–4113; diagram styling (horizontal, then vertical layout); 2223 and 3223; mirrors; shuffle-type catalog; draw handling; repository created

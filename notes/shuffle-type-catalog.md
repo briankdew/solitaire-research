@@ -34,7 +34,7 @@ Tool: `solver/shuffle_types.py <solver-output.json>` computes the D, O and T cha
 
 ## H — Relationships found (hypotheses and their status)
 
-| ID | Relationship | A113 | 2113 | 3113 | 4113* | 2223 | 3223 | 6223 (sample 10k) | 6233 (sample 10k) |
+| ID | Relationship | A113 | 2113 | 3113 | 4113* | 2223 | 3223 | 6223 (sample 10k; confirmed on a second 10k) | 6233 (sample 10k; confirmed on a second 10k) |
 |---|---|---|---|---|---|---|---|---|---|
 | H1 | **O1 ≥ number of cards + fixed D1 (columns + waste)** for winnable shuffles (each blocking card costs at least one detour) | = 1/1 | = 2/2 | = 4/4 | = 7/7 | = 12/12 | **≥ holds 293/293; equality 249/293 (85%)** | with fixed blockers (columns + waste): ≥ holds 4,925/4,925, equality 27%. With stock blockers added: ≥ holds only 3,474/4,925 (short by 1–4 plays), because stock blockers can dissolve on regrouping | fixed blockers: ≥ holds 5,951/5,951, equality 23%. With stock: 5,355/5,951 |
 | H2 | Within a shuffle type, shuffles differ only in O2 (play-order freedom), never in O1, O3 or the set of results | — | — | — | — | holds | **holds 164/164 types** | not measured (needs lines) | not measured |
@@ -71,6 +71,7 @@ Notes:
 ---
 
 ## Change log
+- 2026-11-14 — 6223/6233 confirmation samples: H1 (fixed blockers) holds in every winnable shuffle; H3, H4, H5 figures agree with the discovery samples (59 of 62 comparisons within margin, 3 marginal, as expected by chance)
 - 2026-11-14 — D1 now counts the stock (per-area counts kept). Stock blockers are soft (groups re-form when waste cards are played), so H1 is stated with fixed blockers (columns + waste) only; H5 refigured with the full D1
 - 2026-11-14 — 6223 and 6233 discovery samples (10,000 each): H1 lower bound holds in every winnable shuffle; H3, H4, H5 trends hold. D1 does not yet count the stock
 - 2026-11-14 — D1–D4 now also computed directly from the deal (`solver/sampling.py`); they reproduce every 3223 figure for H1, H4 and H5

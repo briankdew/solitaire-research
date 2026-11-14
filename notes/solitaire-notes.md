@@ -340,7 +340,7 @@ Build a knowledge base of played games for analysis.
 - All 360: SH 360 · GM 14,191 · W 13,968 · L 223 · winnable shuffles 293 · 164 shuffle types (see the shuffle-type catalog)
 - First setup where a choice can lose a winnable game (56 shuffles)
 
-### 6223 and 6233 (limited cognates; discovery samples of 10,000)
+### 6223 and 6233 (limited cognates; discovery and confirmation samples of 10,000 each)
 - Same 12 cards (A–6 ♠♥), draw 3; 239,500,800 shuffles each after mirrors. Sampled with `solver/sampling.py` (seeds 6223001, 6233001); tables `data/sample-6223-discovery.csv`, `data/sample-6233-discovery.csv`; summary by `solver/summarize.py`. No repeated shuffle in either sample
 - 6223: 2 columns (a 1 card; b 1 down + 1 up), waste 3, stock 6 · 6233: 3 columns (a 1; b 1 down + 1; c 2 down + 1), waste 3, stock 3
 - Margins are 95% intervals
@@ -359,6 +359,7 @@ Build a knowledge base of played games for analysis.
 
 - The longest game per shuffle is bimodal: either the game stalls within a few plays, or it runs 16–22 plays
 - Most games are won even in shuffles that can be lost: losing games are few but spread over most shuffles
+- **Confirmation** (seeds 6223002, 6233002; `data/sample-*-confirmation.csv`; compared by `solver/compare.py`): of 62 winnability comparisons (overall and by each level of D1–D4), 59 agree within their 95% margin and 3 differ marginally (z 2.1–2.2, all 6233: no play after the deal 7.6% vs 6.8%, winnable with D2 = 0, winnable with D1 = 2). About 3 are expected by chance at the 5% level, and no trend changes direction. Every median of games agrees. H1 (fixed blockers) holds in all 4,908 and 6,056 winnable confirmation shuffles. Confirmation winnable: 6223 49.1% (48.1–50.1), 6233 60.6% (59.6–61.5). One 6223 shuffle occurs in both samples and one twice in the confirmation sample (expected ≈ 0.6 such repeats)
 
 ### Pattern so far (single suit, 1 column, draw 3)
 | Setup | SH | GM | W | L | Winnable shuffles |

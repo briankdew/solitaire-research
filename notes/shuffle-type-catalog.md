@@ -22,6 +22,18 @@ Tool: `solver/shuffle_types.py <solver-output.json>` computes the D, O and T cha
 | D2 | First column starts with an ace | Column a's dealt card is an A, so a column empties on the first play |
 | D3 | Top waste card | The active waste card after the deal (rank matters: a high card can detour to an empty column; an A just goes home) |
 | D4 | Aces exposed at the deal | Aces that are a pile's top card (playable) after the deal |
+| D5 | Aces reachable | Aces that can be played without any play first: a column's face-up top, the waste top, or the top card of a stock draw group (reached by drawing). Wider than D4 |
+| D6 | Aces face-down | Aces dealt face-down in a column |
+| D7 | Ace depth | Total number of cards lying above the aces in their piles |
+| D8 | 2s reachable | As D5, for the 2s |
+| D9 | 2s face-down | As D6, for the 2s |
+| D10 | High cards face-down | High cards dealt face-down |
+| D11 | Plays at the deal | Number of plays available right after the deal, waste plays counted at every draw position (0 = a dead deal) |
+| D12 | Low card trapped | An A or 2 face-down in a column with a higher card of its own suit above it |
+| D13 | A and 2 depth | Total number of cards lying above the aces and 2s in their piles |
+| D14 | Aces in the stock | Aces dealt into the stock (not the waste) |
+
+D5–D14 are computed by `solver/features.py`; they were added as candidates in the 6223/6233 pattern search (`solver/patterns.py`).
 
 ## O — Outcome characteristics (computed from the game tree)
 
@@ -42,8 +54,15 @@ Tool: `solver/shuffle_types.py <solver-output.json>` computes the D, O and T cha
 | H4 | **Winnability rises with D4 (aces exposed at the deal)** | — | — | — | — | all winnable | **D4 = 2: 72/72 winnable; D4 = 1: 191/216; D4 = 0: 30/72** | D4 0 / 1 / 2: winnable 34% / 65% / 90% (±1–3) ✓ trend, not a rule | D4 0 / 1 / 2: 45% / 69% / 85% ✓ trend |
 | H5 | Fewer blocking cards (D1) → more winnable shuffles and more games | — | — | — | — | — | D1 0 / 1 / 2 / 3: winnable 131/138, 132/174, 28/42, 2/6; avg games 65.9 / 26.6 / 10.8 / 3.5 | D1 (all areas) 0–6: winnable 79% / 62% / 49% / 37% / 31% / 23% / 15%; median games 5,076 / 1,001 / 74 / 10 / 4 / 2 / 2 ✓. Per area, winnable at 0 vs 1 blocker: columns 54% vs 34%, waste 64% vs 39%, stock 57% vs 50% (stock blockers matter least) | D1 (all areas) 0–5: winnable 85% / 70% / 57% / 52% / 46% / 43%; median games 49,164 / 9,203 / 1,627 / 444 / 31 / 28 ✓. Per area, 0 vs 1 blocker: columns 69% vs 56%, waste 68% vs 54%, stock 63% vs 58% |
 | H6 | **Choices can decide W vs L** (a node where one play keeps a win possible and another leads only to losses) | never | never | never | never | never | **first seen: 56 shuffles have both winning and losing games. At those nodes every losing play was p¹; the winning alternative was p¹ (121) or p² (13). E.g. 3223-12: `3♠w-h` (p¹, straight home) loses; `3♠w-a` (p², detour) is the only way to win** | not measured (needs lines) | not measured |
+| H7 | **A dead deal (D11 = 0) is never winnable** (nothing can be played at any draw position, so nothing can ever change) | — | — | — | — | — | — | **rule: 1,239 + 1,220 shuffles (12% of 6223)** | **rule: 758 + 677 (7%)** |
+| H8 | Winnability rises with the plays available at the deal (D11); the strongest single characteristic found | — | — | — | — | — | — | D11 1 / 2 / 3: 45 / 69 / 81% (confirmation 43 / 70 / 82%) | 50 / 73 / 85% (51 / 73 / 87%) |
+| H9 | How reachable the aces are predicts winnability better than D4: D5 (incl. stock group tops), D7 (ace depth), D13 (A and 2 depth) | — | — | — | — | — | — | D5 0 / 1 / 2: 22 / 57 / 80%. D13 0 → 7: 97% → 21%, step by step | D5: 39 / 66 / 83%. D13 0 → 7: 99% → 47% |
+| H10 | A trapped low card (D12) lowers winnability | — | — | — | — | — | — | 53% vs 26% | 0 / 1 / 2: 68 / 50 / 46% |
 
 Notes:
+- 6223/6233 pattern search (`solver/patterns.py`, found on discovery, checked on confirmation): every single-characteristic figure reproduced within a few points. Weak or no effect: 2s reachable (D8), 2s face-down (D9), aces in the stock (D14), stock blockers (D1 stock). A high card face-down (D10) slightly raises winnability in 6223 (61% vs 47%)
+- No pure rule other than H7 survived: two 6233 "always winnable" combinations from discovery (D13 = 0 with no stock or no column blockers) had exceptions in confirmation (74/76, 69/70)
+- Combined: a depth-3 decision tree (D11, then D1 waste / D13 in 6223; D11, then D12 in 6233) predicts W/L correctly for 71% / 70% of confirmation shuffles, against 51% / 61% by always guessing the majority. The deal characteristics so far explain only part of winnability
 - H1: where it is not an equality (44 shuffles, 3223), the blocking card's detour needs somewhere to go: only the high card can fill an empty column, so a lower blocker needs an opposite-colour card one rank higher on the tableau, and placing that card can cost extra plays. The exact cost is not yet captured by a deal characteristic (blocker rank alone does not explain all 44)
 - H1 predicts the fewest plays of a win, not whether a shuffle can be won: winnability is H4/H5
 - H6 matters for the progressive-degree definitions: a p¹ play (judged in the moment) can be the losing choice, and a p² detour can be the only winning one
@@ -71,6 +90,7 @@ Notes:
 ---
 
 ## Change log
+- 2026-11-14 — Pattern search on 6223/6233: added D5–D14 and H7–H10 (H7 is a rule: a dead deal is never winnable)
 - 2026-11-14 — 6223/6233 confirmation samples: H1 (fixed blockers) holds in every winnable shuffle; H3, H4, H5 figures agree with the discovery samples (59 of 62 comparisons within margin, 3 marginal, as expected by chance)
 - 2026-11-14 — D1 now counts the stock (per-area counts kept). Stock blockers are soft (groups re-form when waste cards are played), so H1 is stated with fixed blockers (columns + waste) only; H5 refigured with the full D1
 - 2026-11-14 — 6223 and 6233 discovery samples (10,000 each): H1 lower bound holds in every winnable shuffle; H3, H4, H5 trends hold. D1 does not yet count the stock

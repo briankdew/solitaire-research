@@ -91,7 +91,7 @@ A setup [H][S][C][3] is a **limited cognate** of K473 when:
 ## Sampling (for setups too large to solve every shuffle)
 - `solver/sampling.py`: draws a shuffle by shuffling the full deck uniformly and keeping the first instance of its mirror class (all mirror classes are the same size, so mirror-removed shuffles are sampled uniformly); with replacement. Each shuffle becomes one table row: order, D1–D4, stock size, games, wins, losses, winnable, fewest, most
 - 95% intervals: proportions by Wilson score; means by normal approximation; medians/percentiles by a distribution-free order-statistic (binomial) interval
-- D1 counts blocking cards in the waste and the columns (face-down cards included); the stock is not yet counted as a pile (it is empty in 3223)
+- D1 counts blocking cards in the columns (face-down cards included), the waste and the stock, each kept as its own column of the table. In the stock each draw's group of 3 is a pile (last drawn on top). Stock blockers are soft: e.g. 6223 A♠ 6♥ 4♠ 6♠ 2♥ 2♠ 5♥ 5♠ A♥ 3♠ 3♥ 4♥ has 4♥ on 3♥ in the last stock group, but once 2♠ and A♥ have gone home the stock regroups on the next pass and 4♥ falls into a group of its own; the shuffle is won in 12 plays
 - **Calibration on 3223** (`solver/calibrate.py`; exact table `data/exact-3223.csv`): counting mode reproduces all totals (14,191 games, 13,968 W, 223 L, 293 winnable). The sampler reaches all 360 shuffles uniformly (360,000 draws: chi-square 357 on 359 df). 2,000 samples at each of n = 50, 100, 200, 500, 1000:
   - Proportions (winnable, H1 equality, winnable by D4 and D1 level): coverage 94–96% at every n
   - Mean games per shuffle: coverage 92% at n = 50, 94% at 100, 95–96% from 200 on (heavy tail; fine at 10,000)

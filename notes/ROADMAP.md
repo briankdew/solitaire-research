@@ -16,7 +16,7 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
 1. **Limited cognates 6223 and 6233** (same 12 cards; 2 columns vs 3). Agreed plan:
    - ~~Calibrate sampling on 3223~~ done: intervals hold their 95% coverage (see "Sampling" in the notes); `solver/sampling.py` is ready for the 10k samples
    - ~~Discovery sample~~ done: 10,000 each (seeds 6223001, 6233001), tables in `data/`; headline results in the notes, H1/H3–H5 in the catalog
-   - Pending decision: should D1 (blocking cards) count the stock? It is not counted yet
+   - D1 now counts the stock (user decision: keep fine-grain detail for now; later reassess which characteristics a player can actually see and use)
    - Find patterns with the catalog's deal characteristics; confirm them on a second, independent 10,000 of each
    - Report margins of error; use medians/percentiles for heavy-tailed counts (games per shuffle)
 2. **Shuffle types at 6223/6233 scale**: T3 needs every line of play, but a single shuffle can have 10^5–10^7 games. Needs a way to compute lines/types without enumerating games (e.g. on the position graph)
@@ -24,6 +24,7 @@ Learn how normal Klondike (K473, full deck, draw 3) plays by working up from tin
 4. Toward a full cognate: smallest meeting the draft cognate criteria with 4 suits is 4443 (16 cards)
 
 ## Open questions / pending decisions
+- Later: generalize the characteristics to what a player can know at the moment of play (e.g. that a card is blocked, not by how many cards)
 - Should 4113 be deleted from the data set? (marked `*`)
 - Fork lines: direct chain (current) accepted; revisit only if confusing
 - Notation font for labels (comparison page exists; user deferred)

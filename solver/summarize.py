@@ -6,7 +6,7 @@ import csv, sys
 from collections import Counter
 import sampling as SM
 
-INT = ("D1_blockers", "D2_first_col_ace", "D4_aces_exposed", "stock", "games", "wins", "losses", "winnable", "most")
+INT = ("D1_blockers", "D1_columns", "D1_waste", "D1_stock", "D2_first_col_ace", "D4_aces_exposed", "stock", "games", "wins", "losses", "winnable", "most")
 
 def load(path):
     rows = list(csv.DictReader(open(path, encoding="utf-8")))
@@ -49,7 +49,8 @@ def summarize(path):
     by(rows, "D2_first_col_ace", "D2 (column a starts with an A)  [H3]")
     by(rows, "D3_waste_top", "D3 (top waste card)  [H3]")
     by(rows, "D4_aces_exposed", "D4 (aces exposed)  [H4]")
-    by(rows, "D1_blockers", "D1 (blocking cards, waste + columns)  [H5]")
+    by(rows, "D1_blockers", "D1 (blocking cards: columns + waste + stock)  [H5]")
+    for k in ("D1_columns", "D1_waste", "D1_stock"): by(rows, k, k)
 
 if __name__ == "__main__":
     for p in sys.argv[1:]: summarize(p)

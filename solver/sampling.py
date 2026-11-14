@@ -40,13 +40,17 @@ def row(code, perm):
     cols, w, stock = S.deal(list(perm), ncols, draw)
     state = (cols, w, tuple([0] * nsuits))
     g, wn, ls, few, most = S.stats(state, stock, high, nsuits, len(perm), draw)
-    piles = [list(w)] + [list(h) + list(u) for h, u in cols]
     rk = S.RANKS.index
-    d1 = sum(1 for p in piles for i, c in enumerate(p) if any(d[1] == c[1] and rk(d[0]) < rk(c[0]) for d in p[:i]))
+    def blockers(piles):     # cards above a lower card of their own suit in the same pile (piles listed bottom -> top)
+        return sum(1 for p in piles for i, c in enumerate(p) if any(d[1] == c[1] and rk(d[0]) < rk(c[0]) for d in p[:i]))
+    d1c = blockers([list(h) + list(u) for h, u in cols])
+    d1w = blockers([list(w)])
+    d1s = blockers([list(stock[i:i + draw]) for i in range(0, len(stock), draw)])   # each draw's group, last drawn on top
     tops = [w[-1]] if w else []
     tops += [u[-1] for h, u in cols if u]
     return {"order": " ".join(perm),
-            "D1_blockers": d1,
+            "D1_blockers": d1c + d1w + d1s,
+            "D1_columns": d1c, "D1_waste": d1w, "D1_stock": d1s,
             "D2_first_col_ace": int(bool(cols[0][1]) and cols[0][1][0][0] == "A"),
             "D3_waste_top": w[-1] if w else "",
             "D4_aces_exposed": sum(1 for c in tops if c[0] == "A"),

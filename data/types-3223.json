@@ -1,0 +1,7376 @@
+{
+ "setup": "3223",
+ "shuffles": 360,
+ "types": [
+  {
+   "type": 1,
+   "representative": "3223-127",
+   "members": [
+    "3223-127",
+    "3223-128",
+    "3223-129",
+    "3223-131",
+    "3223-133",
+    "3223-135",
+    "3223-151",
+    "3223-152",
+    "3223-153",
+    "3223-155",
+    "3223-157",
+    "3223-159",
+    "3223-181",
+    "3223-183",
+    "3223-205",
+    "3223-207",
+    "3223-229",
+    "3223-231",
+    "3223-247",
+    "3223-249",
+    "3223-271",
+    "3223-273",
+    "3223-325",
+    "3223-327"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 2,
+   "representative": "3223-76",
+   "members": [
+    "3223-76",
+    "3223-98",
+    "3223-195",
+    "3223-196",
+    "3223-202",
+    "3223-244",
+    "3223-268",
+    "3223-274",
+    "3223-291",
+    "3223-292",
+    "3223-298"
+   ],
+   "fewest": 7,
+   "lines": 3,
+   "games_per_member": [
+    26,
+    24,
+    8,
+    23,
+    26,
+    7,
+    17,
+    10,
+    8,
+    23,
+    14
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 3,
+   "representative": "3223-86",
+   "members": [
+    "3223-86",
+    "3223-169",
+    "3223-176",
+    "3223-208",
+    "3223-307",
+    "3223-309",
+    "3223-310",
+    "3223-349",
+    "3223-351"
+   ],
+   "fewest": 7,
+   "lines": 1,
+   "games_per_member": [
+    2,
+    1,
+    1,
+    2,
+    3,
+    1,
+    1,
+    6,
+    6
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 4,
+   "representative": "3223-91",
+   "members": [
+    "3223-91",
+    "3223-93",
+    "3223-223",
+    "3223-225",
+    "3223-253",
+    "3223-255",
+    "3223-313",
+    "3223-315"
+   ],
+   "fewest": 8,
+   "lines": 2,
+   "games_per_member": [
+    8,
+    11,
+    8,
+    11,
+    8,
+    11,
+    8,
+    11
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 5,
+   "representative": "3223-101",
+   "members": [
+    "3223-101",
+    "3223-102",
+    "3223-245",
+    "3223-269",
+    "3223-270",
+    "3223-276",
+    "3223-299",
+    "3223-300"
+   ],
+   "fewest": 6,
+   "lines": 11,
+   "games_per_member": [
+    62,
+    68,
+    66,
+    64,
+    45,
+    36,
+    66,
+    93
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 6,
+   "representative": "3223-77",
+   "members": [
+    "3223-77",
+    "3223-78",
+    "3223-198",
+    "3223-203",
+    "3223-204",
+    "3223-246",
+    "3223-294"
+   ],
+   "fewest": 6,
+   "lines": 7,
+   "games_per_member": [
+    66,
+    51,
+    106,
+    29,
+    95,
+    17,
+    129
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 7,
+   "representative": "3223-200",
+   "members": [
+    "3223-200",
+    "3223-308",
+    "3223-311",
+    "3223-312",
+    "3223-350",
+    "3223-353",
+    "3223-354"
+   ],
+   "fewest": 6,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    5,
+    2,
+    2,
+    8,
+    11,
+    17
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 8,
+   "representative": "3223-254",
+   "members": [
+    "3223-254",
+    "3223-304",
+    "3223-331",
+    "3223-332",
+    "3223-333",
+    "3223-355",
+    "3223-357"
+   ],
+   "fewest": 8,
+   "lines": 1,
+   "games_per_member": [
+    2,
+    4,
+    1,
+    1,
+    4,
+    6,
+    6
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 9,
+   "representative": "3223-73",
+   "members": [
+    "3223-73",
+    "3223-75",
+    "3223-241",
+    "3223-243",
+    "3223-265",
+    "3223-267"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    48,
+    69,
+    16,
+    16,
+    16,
+    16
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 10,
+   "representative": "3223-85",
+   "members": [
+    "3223-85",
+    "3223-87",
+    "3223-337",
+    "3223-339",
+    "3223-344",
+    "3223-347"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    8,
+    11,
+    16,
+    38,
+    8,
+    11
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 11,
+   "representative": "3223-1",
+   "members": [
+    "3223-1",
+    "3223-25",
+    "3223-50",
+    "3223-121",
+    "3223-145"
+   ],
+   "fewest": 7,
+   "lines": 11,
+   "games_per_member": [
+    50,
+    93,
+    112,
+    35,
+    54
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 12,
+   "representative": "3223-2",
+   "members": [
+    "3223-2",
+    "3223-26",
+    "3223-49",
+    "3223-122",
+    "3223-146"
+   ],
+   "fewest": 7,
+   "lines": 11,
+   "games_per_member": [
+    39,
+    53,
+    82,
+    23,
+    52
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 13,
+   "representative": "3223-28",
+   "members": [
+    "3223-28",
+    "3223-54",
+    "3223-124",
+    "3223-130",
+    "3223-148"
+   ],
+   "fewest": 6,
+   "lines": 15,
+   "games_per_member": [
+    145,
+    184,
+    93,
+    41,
+    67
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 14,
+   "representative": "3223-30",
+   "members": [
+    "3223-30",
+    "3223-52",
+    "3223-126",
+    "3223-132",
+    "3223-150"
+   ],
+   "fewest": 6,
+   "lines": 12,
+   "games_per_member": [
+    96,
+    119,
+    59,
+    22,
+    52
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 15,
+   "representative": "3223-89",
+   "members": [
+    "3223-89",
+    "3223-90",
+    "3223-108",
+    "3223-209",
+    "3223-210"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    8,
+    34,
+    42,
+    22,
+    23
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 16,
+   "representative": "3223-227",
+   "members": [
+    "3223-227",
+    "3223-228",
+    "3223-317",
+    "3223-318",
+    "3223-330"
+   ],
+   "fewest": 6,
+   "lines": 12,
+   "games_per_member": [
+    38,
+    96,
+    38,
+    90,
+    48
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 17,
+   "representative": "3223-10",
+   "members": [
+    "3223-10",
+    "3223-137",
+    "3223-154",
+    "3223-251"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 18,
+   "representative": "3223-27",
+   "members": [
+    "3223-27",
+    "3223-53",
+    "3223-123",
+    "3223-147"
+   ],
+   "fewest": 7,
+   "lines": 11,
+   "games_per_member": [
+    138,
+    179,
+    50,
+    68
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 19,
+   "representative": "3223-134",
+   "members": [
+    "3223-134",
+    "3223-158",
+    "3223-248",
+    "3223-272"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 20,
+   "representative": "3223-136",
+   "members": [
+    "3223-136",
+    "3223-182",
+    "3223-250",
+    "3223-326"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 21,
+   "representative": "3223-172",
+   "members": [
+    "3223-172",
+    "3223-174",
+    "3223-178",
+    "3223-180"
+   ],
+   "fewest": 6,
+   "lines": 18,
+   "games_per_member": [
+    140,
+    155,
+    185,
+    205
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 22,
+   "representative": "3223-199",
+   "members": [
+    "3223-199",
+    "3223-201",
+    "3223-295",
+    "3223-297"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 23,
+   "representative": "3223-218",
+   "members": [
+    "3223-218",
+    "3223-221",
+    "3223-320",
+    "3223-323"
+   ],
+   "fewest": null,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 24,
+   "representative": "3223-219",
+   "members": [
+    "3223-219",
+    "3223-220",
+    "3223-321",
+    "3223-322"
+   ],
+   "fewest": 6,
+   "lines": 8,
+   "games_per_member": [
+    31,
+    75,
+    31,
+    75
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 25,
+   "representative": "3223-224",
+   "members": [
+    "3223-224",
+    "3223-230",
+    "3223-314",
+    "3223-328"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    5,
+    3,
+    5,
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 26,
+   "representative": "3223-259",
+   "members": [
+    "3223-259",
+    "3223-260",
+    "3223-283",
+    "3223-284"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 27,
+   "representative": "3223-263",
+   "members": [
+    "3223-263",
+    "3223-264",
+    "3223-285",
+    "3223-286"
+   ],
+   "fewest": null,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 28,
+   "representative": "3223-39",
+   "members": [
+    "3223-39",
+    "3223-40",
+    "3223-70"
+   ],
+   "fewest": 8,
+   "lines": 4,
+   "games_per_member": [
+    10,
+    34,
+    25
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 29,
+   "representative": "3223-80",
+   "members": [
+    "3223-80",
+    "3223-194",
+    "3223-290"
+   ],
+   "fewest": 8,
+   "lines": 2,
+   "games_per_member": [
+    3,
+    5,
+    7
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 30,
+   "representative": "3223-81",
+   "members": [
+    "3223-81",
+    "3223-82",
+    "3223-112"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    52,
+    65,
+    66
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 31,
+   "representative": "3223-83",
+   "members": [
+    "3223-83",
+    "3223-197",
+    "3223-293"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    9,
+    32,
+    78
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 32,
+   "representative": "3223-88",
+   "members": [
+    "3223-88",
+    "3223-105",
+    "3223-106"
+   ],
+   "fewest": 6,
+   "lines": 5,
+   "games_per_member": [
+    41,
+    24,
+    40
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 33,
+   "representative": "3223-164",
+   "members": [
+    "3223-164",
+    "3223-211",
+    "3223-213"
+   ],
+   "fewest": 9,
+   "lines": 1,
+   "games_per_member": [
+    2,
+    6,
+    6
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 34,
+   "representative": "3223-222",
+   "members": [
+    "3223-222",
+    "3223-324",
+    "3223-329"
+   ],
+   "fewest": 6,
+   "lines": 8,
+   "games_per_member": [
+    120,
+    125,
+    18
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 35,
+   "representative": "3223-258",
+   "members": [
+    "3223-258",
+    "3223-305",
+    "3223-306"
+   ],
+   "fewest": 6,
+   "lines": 11,
+   "games_per_member": [
+    60,
+    73,
+    68
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 36,
+   "representative": "3223-334",
+   "members": [
+    "3223-334",
+    "3223-335",
+    "3223-336"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    7,
+    2,
+    2
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 37,
+   "representative": "3223-340",
+   "members": [
+    "3223-340",
+    "3223-341",
+    "3223-342"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    53,
+    23,
+    32
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 38,
+   "representative": "3223-4",
+   "members": [
+    "3223-4",
+    "3223-6"
+   ],
+   "fewest": 6,
+   "lines": 9,
+   "games_per_member": [
+    15,
+    15
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 39,
+   "representative": "3223-7",
+   "members": [
+    "3223-7",
+    "3223-31"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 40,
+   "representative": "3223-12",
+   "members": [
+    "3223-12",
+    "3223-156"
+   ],
+   "fewest": 8,
+   "lines": 6,
+   "games_per_member": [
+    10,
+    10
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 41,
+   "representative": "3223-13",
+   "members": [
+    "3223-13",
+    "3223-19"
+   ],
+   "fewest": 8,
+   "lines": 6,
+   "games_per_member": [
+    18,
+    18
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 42,
+   "representative": "3223-34",
+   "members": [
+    "3223-34",
+    "3223-60"
+   ],
+   "fewest": 6,
+   "lines": 23,
+   "games_per_member": [
+    151,
+    147
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 43,
+   "representative": "3223-36",
+   "members": [
+    "3223-36",
+    "3223-58"
+   ],
+   "fewest": 6,
+   "lines": 16,
+   "games_per_member": [
+    110,
+    110
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 44,
+   "representative": "3223-44",
+   "members": [
+    "3223-44",
+    "3223-47"
+   ],
+   "fewest": null,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    2
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 45,
+   "representative": "3223-45",
+   "members": [
+    "3223-45",
+    "3223-46"
+   ],
+   "fewest": 7,
+   "lines": 10,
+   "games_per_member": [
+    33,
+    102
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 46,
+   "representative": "3223-51",
+   "members": [
+    "3223-51",
+    "3223-149"
+   ],
+   "fewest": 6,
+   "lines": 28,
+   "games_per_member": [
+    290,
+    144
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 47,
+   "representative": "3223-61",
+   "members": [
+    "3223-61",
+    "3223-63"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    13,
+    13
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 48,
+   "representative": "3223-67",
+   "members": [
+    "3223-67",
+    "3223-69"
+   ],
+   "fewest": 8,
+   "lines": 3,
+   "games_per_member": [
+    8,
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 49,
+   "representative": "3223-71",
+   "members": [
+    "3223-71",
+    "3223-72"
+   ],
+   "fewest": 7,
+   "lines": 23,
+   "games_per_member": [
+    196,
+    210
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 50,
+   "representative": "3223-95",
+   "members": [
+    "3223-95",
+    "3223-96"
+   ],
+   "fewest": 6,
+   "lines": 18,
+   "games_per_member": [
+    176,
+    141
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 51,
+   "representative": "3223-104",
+   "members": [
+    "3223-104",
+    "3223-107"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 52,
+   "representative": "3223-110",
+   "members": [
+    "3223-110",
+    "3223-232"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    9,
+    9
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 53,
+   "representative": "3223-119",
+   "members": [
+    "3223-119",
+    "3223-120"
+   ],
+   "fewest": 6,
+   "lines": 10,
+   "games_per_member": [
+    44,
+    76
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 54,
+   "representative": "3223-138",
+   "members": [
+    "3223-138",
+    "3223-252"
+   ],
+   "fewest": null,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    2
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 55,
+   "representative": "3223-140",
+   "members": [
+    "3223-140",
+    "3223-143"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 56,
+   "representative": "3223-141",
+   "members": [
+    "3223-141",
+    "3223-142"
+   ],
+   "fewest": 8,
+   "lines": 7,
+   "games_per_member": [
+    26,
+    78
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 57,
+   "representative": "3223-170",
+   "members": [
+    "3223-170",
+    "3223-175"
+   ],
+   "fewest": 7,
+   "lines": 3,
+   "games_per_member": [
+    4,
+    4
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 58,
+   "representative": "3223-171",
+   "members": [
+    "3223-171",
+    "3223-179"
+   ],
+   "fewest": 7,
+   "lines": 3,
+   "games_per_member": [
+    7,
+    7
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 59,
+   "representative": "3223-173",
+   "members": [
+    "3223-173",
+    "3223-177"
+   ],
+   "fewest": 6,
+   "lines": 16,
+   "games_per_member": [
+    34,
+    34
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 60,
+   "representative": "3223-187",
+   "members": [
+    "3223-187",
+    "3223-189"
+   ],
+   "fewest": 9,
+   "lines": 2,
+   "games_per_member": [
+    2,
+    5
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 61,
+   "representative": "3223-191",
+   "members": [
+    "3223-191",
+    "3223-192"
+   ],
+   "fewest": 7,
+   "lines": 19,
+   "games_per_member": [
+    153,
+    198
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 62,
+   "representative": "3223-193",
+   "members": [
+    "3223-193",
+    "3223-289"
+   ],
+   "fewest": 8,
+   "lines": 3,
+   "games_per_member": [
+    5,
+    5
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 63,
+   "representative": "3223-215",
+   "members": [
+    "3223-215",
+    "3223-216"
+   ],
+   "fewest": 6,
+   "lines": 16,
+   "games_per_member": [
+    122,
+    182
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 64,
+   "representative": "3223-217",
+   "members": [
+    "3223-217",
+    "3223-319"
+   ],
+   "fewest": 8,
+   "lines": 8,
+   "games_per_member": [
+    17,
+    17
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 65,
+   "representative": "3223-235",
+   "members": [
+    "3223-235",
+    "3223-237"
+   ],
+   "fewest": 7,
+   "lines": 3,
+   "games_per_member": [
+    11,
+    15
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 66,
+   "representative": "3223-239",
+   "members": [
+    "3223-239",
+    "3223-240"
+   ],
+   "fewest": 6,
+   "lines": 6,
+   "games_per_member": [
+    25,
+    46
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 67,
+   "representative": "3223-242",
+   "members": [
+    "3223-242",
+    "3223-266"
+   ],
+   "fewest": 6,
+   "lines": 13,
+   "games_per_member": [
+    78,
+    57
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 68,
+   "representative": "3223-256",
+   "members": [
+    "3223-256",
+    "3223-316"
+   ],
+   "fewest": 6,
+   "lines": 13,
+   "games_per_member": [
+    72,
+    63
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 69,
+   "representative": "3223-278",
+   "members": [
+    "3223-278",
+    "3223-281"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 70,
+   "representative": "3223-279",
+   "members": [
+    "3223-279",
+    "3223-280"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    24,
+    57
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 71,
+   "representative": "3223-301",
+   "members": [
+    "3223-301",
+    "3223-303"
+   ],
+   "fewest": null,
+   "lines": 1,
+   "games_per_member": [
+    1,
+    1
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 72,
+   "representative": "3223-345",
+   "members": [
+    "3223-345",
+    "3223-346"
+   ],
+   "fewest": 6,
+   "lines": 6,
+   "games_per_member": [
+    53,
+    45
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 73,
+   "representative": "3223-359",
+   "members": [
+    "3223-359",
+    "3223-360"
+   ],
+   "fewest": 6,
+   "lines": 6,
+   "games_per_member": [
+    61,
+    43
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 74,
+   "representative": "3223-3",
+   "members": [
+    "3223-3"
+   ],
+   "fewest": 7,
+   "lines": 10,
+   "games_per_member": [
+    44
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 75,
+   "representative": "3223-5",
+   "members": [
+    "3223-5"
+   ],
+   "fewest": 6,
+   "lines": 32,
+   "games_per_member": [
+    104
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 76,
+   "representative": "3223-8",
+   "members": [
+    "3223-8"
+   ],
+   "fewest": 8,
+   "lines": 5,
+   "games_per_member": [
+    17
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 77,
+   "representative": "3223-9",
+   "members": [
+    "3223-9"
+   ],
+   "fewest": null,
+   "lines": 2,
+   "games_per_member": [
+    2
+   ],
+   "winnable": false,
+   "has_losing_games": true
+  },
+  {
+   "type": 78,
+   "representative": "3223-11",
+   "members": [
+    "3223-11"
+   ],
+   "fewest": 8,
+   "lines": 5,
+   "games_per_member": [
+    31
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 79,
+   "representative": "3223-14",
+   "members": [
+    "3223-14"
+   ],
+   "fewest": 7,
+   "lines": 20,
+   "games_per_member": [
+    78
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 80,
+   "representative": "3223-15",
+   "members": [
+    "3223-15"
+   ],
+   "fewest": 7,
+   "lines": 8,
+   "games_per_member": [
+    21
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 81,
+   "representative": "3223-16",
+   "members": [
+    "3223-16"
+   ],
+   "fewest": 7,
+   "lines": 9,
+   "games_per_member": [
+    32
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 82,
+   "representative": "3223-17",
+   "members": [
+    "3223-17"
+   ],
+   "fewest": 7,
+   "lines": 16,
+   "games_per_member": [
+    104
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 83,
+   "representative": "3223-18",
+   "members": [
+    "3223-18"
+   ],
+   "fewest": 6,
+   "lines": 30,
+   "games_per_member": [
+    85
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 84,
+   "representative": "3223-20",
+   "members": [
+    "3223-20"
+   ],
+   "fewest": 8,
+   "lines": 3,
+   "games_per_member": [
+    7
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 85,
+   "representative": "3223-21",
+   "members": [
+    "3223-21"
+   ],
+   "fewest": 8,
+   "lines": 8,
+   "games_per_member": [
+    21
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 86,
+   "representative": "3223-22",
+   "members": [
+    "3223-22"
+   ],
+   "fewest": 7,
+   "lines": 34,
+   "games_per_member": [
+    138
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 87,
+   "representative": "3223-23",
+   "members": [
+    "3223-23"
+   ],
+   "fewest": 7,
+   "lines": 7,
+   "games_per_member": [
+    17
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 88,
+   "representative": "3223-24",
+   "members": [
+    "3223-24"
+   ],
+   "fewest": 7,
+   "lines": 21,
+   "games_per_member": [
+    104
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 89,
+   "representative": "3223-29",
+   "members": [
+    "3223-29"
+   ],
+   "fewest": 6,
+   "lines": 28,
+   "games_per_member": [
+    206
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 90,
+   "representative": "3223-32",
+   "members": [
+    "3223-32"
+   ],
+   "fewest": 9,
+   "lines": 1,
+   "games_per_member": [
+    2
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 91,
+   "representative": "3223-33",
+   "members": [
+    "3223-33"
+   ],
+   "fewest": 7,
+   "lines": 8,
+   "games_per_member": [
+    18
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 92,
+   "representative": "3223-35",
+   "members": [
+    "3223-35"
+   ],
+   "fewest": 7,
+   "lines": 11,
+   "games_per_member": [
+    45
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 93,
+   "representative": "3223-37",
+   "members": [
+    "3223-37"
+   ],
+   "fewest": 9,
+   "lines": 4,
+   "games_per_member": [
+    6
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 94,
+   "representative": "3223-38",
+   "members": [
+    "3223-38"
+   ],
+   "fewest": 9,
+   "lines": 4,
+   "games_per_member": [
+    11
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 95,
+   "representative": "3223-41",
+   "members": [
+    "3223-41"
+   ],
+   "fewest": 8,
+   "lines": 13,
+   "games_per_member": [
+    163
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 96,
+   "representative": "3223-42",
+   "members": [
+    "3223-42"
+   ],
+   "fewest": 7,
+   "lines": 15,
+   "games_per_member": [
+    250
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 97,
+   "representative": "3223-43",
+   "members": [
+    "3223-43"
+   ],
+   "fewest": 8,
+   "lines": 9,
+   "games_per_member": [
+    18
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 98,
+   "representative": "3223-48",
+   "members": [
+    "3223-48"
+   ],
+   "fewest": 6,
+   "lines": 20,
+   "games_per_member": [
+    213
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 99,
+   "representative": "3223-55",
+   "members": [
+    "3223-55"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 100,
+   "representative": "3223-56",
+   "members": [
+    "3223-56"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    7
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 101,
+   "representative": "3223-57",
+   "members": [
+    "3223-57"
+   ],
+   "fewest": 7,
+   "lines": 7,
+   "games_per_member": [
+    58
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 102,
+   "representative": "3223-59",
+   "members": [
+    "3223-59"
+   ],
+   "fewest": 6,
+   "lines": 28,
+   "games_per_member": [
+    82
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 103,
+   "representative": "3223-62",
+   "members": [
+    "3223-62"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    11
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 104,
+   "representative": "3223-64",
+   "members": [
+    "3223-64"
+   ],
+   "fewest": 7,
+   "lines": 15,
+   "games_per_member": [
+    90
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 105,
+   "representative": "3223-65",
+   "members": [
+    "3223-65"
+   ],
+   "fewest": 6,
+   "lines": 28,
+   "games_per_member": [
+    95
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 106,
+   "representative": "3223-66",
+   "members": [
+    "3223-66"
+   ],
+   "fewest": 6,
+   "lines": 24,
+   "games_per_member": [
+    174
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 107,
+   "representative": "3223-68",
+   "members": [
+    "3223-68"
+   ],
+   "fewest": 7,
+   "lines": 11,
+   "games_per_member": [
+    30
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 108,
+   "representative": "3223-74",
+   "members": [
+    "3223-74"
+   ],
+   "fewest": 6,
+   "lines": 8,
+   "games_per_member": [
+    77
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 109,
+   "representative": "3223-79",
+   "members": [
+    "3223-79"
+   ],
+   "fewest": 8,
+   "lines": 5,
+   "games_per_member": [
+    17
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 110,
+   "representative": "3223-84",
+   "members": [
+    "3223-84"
+   ],
+   "fewest": 6,
+   "lines": 8,
+   "games_per_member": [
+    91
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 111,
+   "representative": "3223-92",
+   "members": [
+    "3223-92"
+   ],
+   "fewest": 8,
+   "lines": 12,
+   "games_per_member": [
+    39
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 112,
+   "representative": "3223-94",
+   "members": [
+    "3223-94"
+   ],
+   "fewest": 6,
+   "lines": 13,
+   "games_per_member": [
+    96
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 113,
+   "representative": "3223-97",
+   "members": [
+    "3223-97"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    61
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 114,
+   "representative": "3223-99",
+   "members": [
+    "3223-99"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    56
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 115,
+   "representative": "3223-100",
+   "members": [
+    "3223-100"
+   ],
+   "fewest": 6,
+   "lines": 14,
+   "games_per_member": [
+    78
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 116,
+   "representative": "3223-103",
+   "members": [
+    "3223-103"
+   ],
+   "fewest": 8,
+   "lines": 5,
+   "games_per_member": [
+    13
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 117,
+   "representative": "3223-109",
+   "members": [
+    "3223-109"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    16
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 118,
+   "representative": "3223-111",
+   "members": [
+    "3223-111"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    32
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 119,
+   "representative": "3223-113",
+   "members": [
+    "3223-113"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    12
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 120,
+   "representative": "3223-114",
+   "members": [
+    "3223-114"
+   ],
+   "fewest": 6,
+   "lines": 12,
+   "games_per_member": [
+    86
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 121,
+   "representative": "3223-115",
+   "members": [
+    "3223-115"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    38
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 122,
+   "representative": "3223-116",
+   "members": [
+    "3223-116"
+   ],
+   "fewest": 7,
+   "lines": 10,
+   "games_per_member": [
+    23
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 123,
+   "representative": "3223-117",
+   "members": [
+    "3223-117"
+   ],
+   "fewest": 7,
+   "lines": 8,
+   "games_per_member": [
+    113
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 124,
+   "representative": "3223-118",
+   "members": [
+    "3223-118"
+   ],
+   "fewest": 6,
+   "lines": 12,
+   "games_per_member": [
+    152
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 125,
+   "representative": "3223-125",
+   "members": [
+    "3223-125"
+   ],
+   "fewest": 6,
+   "lines": 24,
+   "games_per_member": [
+    76
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 126,
+   "representative": "3223-139",
+   "members": [
+    "3223-139"
+   ],
+   "fewest": 10,
+   "lines": 6,
+   "games_per_member": [
+    14
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 127,
+   "representative": "3223-144",
+   "members": [
+    "3223-144"
+   ],
+   "fewest": 6,
+   "lines": 9,
+   "games_per_member": [
+    117
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 128,
+   "representative": "3223-160",
+   "members": [
+    "3223-160"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    15
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 129,
+   "representative": "3223-161",
+   "members": [
+    "3223-161"
+   ],
+   "fewest": 8,
+   "lines": 5,
+   "games_per_member": [
+    9
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 130,
+   "representative": "3223-162",
+   "members": [
+    "3223-162"
+   ],
+   "fewest": 6,
+   "lines": 19,
+   "games_per_member": [
+    49
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 131,
+   "representative": "3223-163",
+   "members": [
+    "3223-163"
+   ],
+   "fewest": 9,
+   "lines": 3,
+   "games_per_member": [
+    9
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 132,
+   "representative": "3223-165",
+   "members": [
+    "3223-165"
+   ],
+   "fewest": 9,
+   "lines": 4,
+   "games_per_member": [
+    14
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 133,
+   "representative": "3223-166",
+   "members": [
+    "3223-166"
+   ],
+   "fewest": 7,
+   "lines": 29,
+   "games_per_member": [
+    125
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 134,
+   "representative": "3223-167",
+   "members": [
+    "3223-167"
+   ],
+   "fewest": 8,
+   "lines": 4,
+   "games_per_member": [
+    8
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 135,
+   "representative": "3223-168",
+   "members": [
+    "3223-168"
+   ],
+   "fewest": 7,
+   "lines": 17,
+   "games_per_member": [
+    92
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 136,
+   "representative": "3223-184",
+   "members": [
+    "3223-184"
+   ],
+   "fewest": 7,
+   "lines": 3,
+   "games_per_member": [
+    6
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 137,
+   "representative": "3223-185",
+   "members": [
+    "3223-185"
+   ],
+   "fewest": 6,
+   "lines": 12,
+   "games_per_member": [
+    23
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 138,
+   "representative": "3223-186",
+   "members": [
+    "3223-186"
+   ],
+   "fewest": 6,
+   "lines": 16,
+   "games_per_member": [
+    80
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 139,
+   "representative": "3223-188",
+   "members": [
+    "3223-188"
+   ],
+   "fewest": 9,
+   "lines": 2,
+   "games_per_member": [
+    8
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 140,
+   "representative": "3223-190",
+   "members": [
+    "3223-190"
+   ],
+   "fewest": 7,
+   "lines": 10,
+   "games_per_member": [
+    29
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 141,
+   "representative": "3223-206",
+   "members": [
+    "3223-206"
+   ],
+   "fewest": 6,
+   "lines": 1,
+   "games_per_member": [
+    1
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 142,
+   "representative": "3223-212",
+   "members": [
+    "3223-212"
+   ],
+   "fewest": 6,
+   "lines": 9,
+   "games_per_member": [
+    55
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 143,
+   "representative": "3223-214",
+   "members": [
+    "3223-214"
+   ],
+   "fewest": 8,
+   "lines": 10,
+   "games_per_member": [
+    36
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 144,
+   "representative": "3223-226",
+   "members": [
+    "3223-226"
+   ],
+   "fewest": 6,
+   "lines": 14,
+   "games_per_member": [
+    78
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 145,
+   "representative": "3223-233",
+   "members": [
+    "3223-233"
+   ],
+   "fewest": 6,
+   "lines": 13,
+   "games_per_member": [
+    60
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 146,
+   "representative": "3223-234",
+   "members": [
+    "3223-234"
+   ],
+   "fewest": 6,
+   "lines": 9,
+   "games_per_member": [
+    42
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 147,
+   "representative": "3223-236",
+   "members": [
+    "3223-236"
+   ],
+   "fewest": 6,
+   "lines": 5,
+   "games_per_member": [
+    14
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 148,
+   "representative": "3223-238",
+   "members": [
+    "3223-238"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    26
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 149,
+   "representative": "3223-257",
+   "members": [
+    "3223-257"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    8
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 150,
+   "representative": "3223-261",
+   "members": [
+    "3223-261"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 151,
+   "representative": "3223-262",
+   "members": [
+    "3223-262"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    5
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 152,
+   "representative": "3223-275",
+   "members": [
+    "3223-275"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    8
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 153,
+   "representative": "3223-277",
+   "members": [
+    "3223-277"
+   ],
+   "fewest": 9,
+   "lines": 5,
+   "games_per_member": [
+    13
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 154,
+   "representative": "3223-282",
+   "members": [
+    "3223-282"
+   ],
+   "fewest": 7,
+   "lines": 5,
+   "games_per_member": [
+    73
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 155,
+   "representative": "3223-287",
+   "members": [
+    "3223-287"
+   ],
+   "fewest": 8,
+   "lines": 2,
+   "games_per_member": [
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 156,
+   "representative": "3223-288",
+   "members": [
+    "3223-288"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    5
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 157,
+   "representative": "3223-296",
+   "members": [
+    "3223-296"
+   ],
+   "fewest": 6,
+   "lines": 3,
+   "games_per_member": [
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 158,
+   "representative": "3223-302",
+   "members": [
+    "3223-302"
+   ],
+   "fewest": 6,
+   "lines": 3,
+   "games_per_member": [
+    3
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 159,
+   "representative": "3223-338",
+   "members": [
+    "3223-338"
+   ],
+   "fewest": 7,
+   "lines": 4,
+   "games_per_member": [
+    12
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 160,
+   "representative": "3223-343",
+   "members": [
+    "3223-343"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    21
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 161,
+   "representative": "3223-348",
+   "members": [
+    "3223-348"
+   ],
+   "fewest": 6,
+   "lines": 5,
+   "games_per_member": [
+    40
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  },
+  {
+   "type": 162,
+   "representative": "3223-352",
+   "members": [
+    "3223-352"
+   ],
+   "fewest": 7,
+   "lines": 2,
+   "games_per_member": [
+    9
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 163,
+   "representative": "3223-356",
+   "members": [
+    "3223-356"
+   ],
+   "fewest": 7,
+   "lines": 6,
+   "games_per_member": [
+    21
+   ],
+   "winnable": true,
+   "has_losing_games": true
+  },
+  {
+   "type": 164,
+   "representative": "3223-358",
+   "members": [
+    "3223-358"
+   ],
+   "fewest": 6,
+   "lines": 4,
+   "games_per_member": [
+    24
+   ],
+   "winnable": true,
+   "has_losing_games": false
+  }
+ ],
+ "per_shuffle": [
+  {
+   "id": "3223-1",
+   "perm": "A♠ A♥ 2♠ 2♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 50,
+   "W": 50,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-2",
+   "perm": "A♠ A♥ 2♠ 2♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 39,
+   "W": 39,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-3",
+   "perm": "A♠ A♥ 2♠ 3♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 44,
+   "W": 44,
+   "L": 0,
+   "lines": 10,
+   "fewest": 7
+  },
+  {
+   "id": "3223-4",
+   "perm": "A♠ A♥ 2♠ 3♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 15,
+   "W": 15,
+   "L": 0,
+   "lines": 9,
+   "fewest": 6
+  },
+  {
+   "id": "3223-5",
+   "perm": "A♠ A♥ 2♠ 3♥ 2♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 104,
+   "W": 104,
+   "L": 0,
+   "lines": 32,
+   "fewest": 6
+  },
+  {
+   "id": "3223-6",
+   "perm": "A♠ A♥ 2♠ 3♥ 3♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 15,
+   "W": 15,
+   "L": 0,
+   "lines": 9,
+   "fewest": 6
+  },
+  {
+   "id": "3223-7",
+   "perm": "A♠ A♥ 2♥ 2♠ 3♠ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-8",
+   "perm": "A♠ A♥ 2♥ 2♠ 3♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 17,
+   "L": 0,
+   "lines": 5,
+   "fewest": 8
+  },
+  {
+   "id": "3223-9",
+   "perm": "A♠ A♥ 2♥ 3♠ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-10",
+   "perm": "A♠ A♥ 2♥ 3♠ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-11",
+   "perm": "A♠ A♥ 2♥ 3♥ 2♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 31,
+   "W": 30,
+   "L": 1,
+   "lines": 5,
+   "fewest": 8
+  },
+  {
+   "id": "3223-12",
+   "perm": "A♠ A♥ 2♥ 3♥ 3♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 10,
+   "W": 8,
+   "L": 2,
+   "lines": 6,
+   "fewest": 8
+  },
+  {
+   "id": "3223-13",
+   "perm": "A♠ A♥ 3♠ 2♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 18,
+   "W": 16,
+   "L": 2,
+   "lines": 6,
+   "fewest": 8
+  },
+  {
+   "id": "3223-14",
+   "perm": "A♠ A♥ 3♠ 2♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 78,
+   "W": 74,
+   "L": 4,
+   "lines": 20,
+   "fewest": 7
+  },
+  {
+   "id": "3223-15",
+   "perm": "A♠ A♥ 3♠ 2♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 21,
+   "W": 18,
+   "L": 3,
+   "lines": 8,
+   "fewest": 7
+  },
+  {
+   "id": "3223-16",
+   "perm": "A♠ A♥ 3♠ 2♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 32,
+   "W": 31,
+   "L": 1,
+   "lines": 9,
+   "fewest": 7
+  },
+  {
+   "id": "3223-17",
+   "perm": "A♠ A♥ 3♠ 3♥ 2♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 104,
+   "W": 102,
+   "L": 2,
+   "lines": 16,
+   "fewest": 7
+  },
+  {
+   "id": "3223-18",
+   "perm": "A♠ A♥ 3♠ 3♥ 2♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 85,
+   "W": 84,
+   "L": 1,
+   "lines": 30,
+   "fewest": 6
+  },
+  {
+   "id": "3223-19",
+   "perm": "A♠ A♥ 3♥ 2♠ 2♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 18,
+   "W": 16,
+   "L": 2,
+   "lines": 6,
+   "fewest": 8
+  },
+  {
+   "id": "3223-20",
+   "perm": "A♠ A♥ 3♥ 2♠ 3♠ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 3,
+   "fewest": 8
+  },
+  {
+   "id": "3223-21",
+   "perm": "A♠ A♥ 3♥ 2♥ 2♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 21,
+   "W": 18,
+   "L": 3,
+   "lines": 8,
+   "fewest": 8
+  },
+  {
+   "id": "3223-22",
+   "perm": "A♠ A♥ 3♥ 2♥ 3♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 138,
+   "W": 131,
+   "L": 7,
+   "lines": 34,
+   "fewest": 7
+  },
+  {
+   "id": "3223-23",
+   "perm": "A♠ A♥ 3♥ 3♠ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 17,
+   "L": 0,
+   "lines": 7,
+   "fewest": 7
+  },
+  {
+   "id": "3223-24",
+   "perm": "A♠ A♥ 3♥ 3♠ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 104,
+   "W": 104,
+   "L": 0,
+   "lines": 21,
+   "fewest": 7
+  },
+  {
+   "id": "3223-25",
+   "perm": "A♠ 2♠ A♥ 2♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 93,
+   "W": 93,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-26",
+   "perm": "A♠ 2♠ A♥ 2♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 53,
+   "W": 53,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-27",
+   "perm": "A♠ 2♠ A♥ 3♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 138,
+   "W": 138,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-28",
+   "perm": "A♠ 2♠ A♥ 3♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 145,
+   "W": 145,
+   "L": 0,
+   "lines": 15,
+   "fewest": 6
+  },
+  {
+   "id": "3223-29",
+   "perm": "A♠ 2♠ A♥ 3♥ 2♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 206,
+   "W": 206,
+   "L": 0,
+   "lines": 28,
+   "fewest": 6
+  },
+  {
+   "id": "3223-30",
+   "perm": "A♠ 2♠ A♥ 3♥ 3♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 96,
+   "W": 96,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-31",
+   "perm": "A♠ 2♠ 2♥ A♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-32",
+   "perm": "A♠ 2♠ 2♥ A♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 1,
+   "fewest": 9
+  },
+  {
+   "id": "3223-33",
+   "perm": "A♠ 2♠ 2♥ 3♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 18,
+   "W": 18,
+   "L": 0,
+   "lines": 8,
+   "fewest": 7
+  },
+  {
+   "id": "3223-34",
+   "perm": "A♠ 2♠ 2♥ 3♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 151,
+   "W": 151,
+   "L": 0,
+   "lines": 23,
+   "fewest": 6
+  },
+  {
+   "id": "3223-35",
+   "perm": "A♠ 2♠ 2♥ 3♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 45,
+   "W": 45,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-36",
+   "perm": "A♠ 2♠ 2♥ 3♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 110,
+   "W": 110,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-37",
+   "perm": "A♠ 2♠ 3♠ A♥ 2♥ 3♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 6,
+   "W": 3,
+   "L": 3,
+   "lines": 4,
+   "fewest": 9
+  },
+  {
+   "id": "3223-38",
+   "perm": "A♠ 2♠ 3♠ A♥ 3♥ 2♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 10,
+   "L": 1,
+   "lines": 4,
+   "fewest": 9
+  },
+  {
+   "id": "3223-39",
+   "perm": "A♠ 2♠ 3♠ 2♥ A♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 10,
+   "W": 10,
+   "L": 0,
+   "lines": 4,
+   "fewest": 8
+  },
+  {
+   "id": "3223-40",
+   "perm": "A♠ 2♠ 3♠ 2♥ 3♥ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 34,
+   "W": 34,
+   "L": 0,
+   "lines": 4,
+   "fewest": 8
+  },
+  {
+   "id": "3223-41",
+   "perm": "A♠ 2♠ 3♠ 3♥ A♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 163,
+   "W": 162,
+   "L": 1,
+   "lines": 13,
+   "fewest": 8
+  },
+  {
+   "id": "3223-42",
+   "perm": "A♠ 2♠ 3♠ 3♥ 2♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 250,
+   "W": 250,
+   "L": 0,
+   "lines": 15,
+   "fewest": 7
+  },
+  {
+   "id": "3223-43",
+   "perm": "A♠ 2♠ 3♥ A♥ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 18,
+   "W": 13,
+   "L": 5,
+   "lines": 9,
+   "fewest": 8
+  },
+  {
+   "id": "3223-44",
+   "perm": "A♠ 2♠ 3♥ A♥ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-45",
+   "perm": "A♠ 2♠ 3♥ 2♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 33,
+   "W": 33,
+   "L": 0,
+   "lines": 10,
+   "fewest": 7
+  },
+  {
+   "id": "3223-46",
+   "perm": "A♠ 2♠ 3♥ 2♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 102,
+   "W": 102,
+   "L": 0,
+   "lines": 10,
+   "fewest": 7
+  },
+  {
+   "id": "3223-47",
+   "perm": "A♠ 2♠ 3♥ 3♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-48",
+   "perm": "A♠ 2♠ 3♥ 3♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 213,
+   "W": 213,
+   "L": 0,
+   "lines": 20,
+   "fewest": 6
+  },
+  {
+   "id": "3223-49",
+   "perm": "A♠ 2♥ A♥ 2♠ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 82,
+   "W": 82,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-50",
+   "perm": "A♠ 2♥ A♥ 2♠ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 112,
+   "W": 112,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-51",
+   "perm": "A♠ 2♥ A♥ 3♠ 2♠ 3♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 290,
+   "W": 290,
+   "L": 0,
+   "lines": 28,
+   "fewest": 6
+  },
+  {
+   "id": "3223-52",
+   "perm": "A♠ 2♥ A♥ 3♠ 3♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 119,
+   "W": 119,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-53",
+   "perm": "A♠ 2♥ A♥ 3♥ 2♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 179,
+   "W": 179,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-54",
+   "perm": "A♠ 2♥ A♥ 3♥ 3♠ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 184,
+   "W": 184,
+   "L": 0,
+   "lines": 15,
+   "fewest": 6
+  },
+  {
+   "id": "3223-55",
+   "perm": "A♠ 2♥ 2♠ A♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-56",
+   "perm": "A♠ 2♥ 2♠ A♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-57",
+   "perm": "A♠ 2♥ 2♠ 3♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 58,
+   "W": 58,
+   "L": 0,
+   "lines": 7,
+   "fewest": 7
+  },
+  {
+   "id": "3223-58",
+   "perm": "A♠ 2♥ 2♠ 3♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 110,
+   "W": 110,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-59",
+   "perm": "A♠ 2♥ 2♠ 3♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 82,
+   "W": 82,
+   "L": 0,
+   "lines": 28,
+   "fewest": 6
+  },
+  {
+   "id": "3223-60",
+   "perm": "A♠ 2♥ 2♠ 3♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 147,
+   "W": 147,
+   "L": 0,
+   "lines": 23,
+   "fewest": 6
+  },
+  {
+   "id": "3223-61",
+   "perm": "A♠ 2♥ 3♠ A♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 13,
+   "W": 13,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-62",
+   "perm": "A♠ 2♥ 3♠ A♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-63",
+   "perm": "A♠ 2♥ 3♠ 2♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 13,
+   "W": 13,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-64",
+   "perm": "A♠ 2♥ 3♠ 2♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 90,
+   "W": 90,
+   "L": 0,
+   "lines": 15,
+   "fewest": 7
+  },
+  {
+   "id": "3223-65",
+   "perm": "A♠ 2♥ 3♠ 3♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 95,
+   "W": 95,
+   "L": 0,
+   "lines": 28,
+   "fewest": 6
+  },
+  {
+   "id": "3223-66",
+   "perm": "A♠ 2♥ 3♠ 3♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 174,
+   "W": 174,
+   "L": 0,
+   "lines": 24,
+   "fewest": 6
+  },
+  {
+   "id": "3223-67",
+   "perm": "A♠ 2♥ 3♥ A♥ 2♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 7,
+   "L": 1,
+   "lines": 3,
+   "fewest": 8
+  },
+  {
+   "id": "3223-68",
+   "perm": "A♠ 2♥ 3♥ A♥ 3♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 30,
+   "W": 30,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-69",
+   "perm": "A♠ 2♥ 3♥ 2♠ A♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 2,
+   "L": 1,
+   "lines": 3,
+   "fewest": 8
+  },
+  {
+   "id": "3223-70",
+   "perm": "A♠ 2♥ 3♥ 2♠ 3♠ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 25,
+   "W": 25,
+   "L": 0,
+   "lines": 4,
+   "fewest": 8
+  },
+  {
+   "id": "3223-71",
+   "perm": "A♠ 2♥ 3♥ 3♠ A♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 196,
+   "W": 196,
+   "L": 0,
+   "lines": 23,
+   "fewest": 7
+  },
+  {
+   "id": "3223-72",
+   "perm": "A♠ 2♥ 3♥ 3♠ 2♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 210,
+   "W": 210,
+   "L": 0,
+   "lines": 23,
+   "fewest": 7
+  },
+  {
+   "id": "3223-73",
+   "perm": "A♠ 3♠ A♥ 2♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 48,
+   "W": 48,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-74",
+   "perm": "A♠ 3♠ A♥ 2♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 77,
+   "W": 77,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-75",
+   "perm": "A♠ 3♠ A♥ 2♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 2,
+   "GM": 69,
+   "W": 69,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-76",
+   "perm": "A♠ 3♠ A♥ 2♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 26,
+   "W": 26,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-77",
+   "perm": "A♠ 3♠ A♥ 3♥ 2♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 66,
+   "W": 66,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-78",
+   "perm": "A♠ 3♠ A♥ 3♥ 2♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 51,
+   "W": 51,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-79",
+   "perm": "A♠ 3♠ 2♠ A♥ 2♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 12,
+   "L": 5,
+   "lines": 5,
+   "fewest": 8
+  },
+  {
+   "id": "3223-80",
+   "perm": "A♠ 3♠ 2♠ A♥ 3♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 2,
+   "L": 1,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-81",
+   "perm": "A♠ 3♠ 2♠ 2♥ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 52,
+   "W": 52,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-82",
+   "perm": "A♠ 3♠ 2♠ 2♥ 3♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 65,
+   "W": 65,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-83",
+   "perm": "A♠ 3♠ 2♠ 3♥ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 9,
+   "W": 8,
+   "L": 1,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-84",
+   "perm": "A♠ 3♠ 2♠ 3♥ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 91,
+   "W": 91,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-85",
+   "perm": "A♠ 3♠ 2♥ A♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-86",
+   "perm": "A♠ 3♠ 2♥ A♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-87",
+   "perm": "A♠ 3♠ 2♥ 2♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-88",
+   "perm": "A♠ 3♠ 2♥ 2♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 41,
+   "W": 41,
+   "L": 0,
+   "lines": 5,
+   "fewest": 6
+  },
+  {
+   "id": "3223-89",
+   "perm": "A♠ 3♠ 2♥ 3♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-90",
+   "perm": "A♠ 3♠ 2♥ 3♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 34,
+   "W": 34,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-91",
+   "perm": "A♠ 3♠ 3♥ A♥ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-92",
+   "perm": "A♠ 3♠ 3♥ A♥ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 39,
+   "W": 32,
+   "L": 7,
+   "lines": 12,
+   "fewest": 8
+  },
+  {
+   "id": "3223-93",
+   "perm": "A♠ 3♠ 3♥ 2♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-94",
+   "perm": "A♠ 3♠ 3♥ 2♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 96,
+   "W": 96,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-95",
+   "perm": "A♠ 3♠ 3♥ 2♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 176,
+   "W": 176,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-96",
+   "perm": "A♠ 3♠ 3♥ 2♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 141,
+   "W": 141,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-97",
+   "perm": "A♠ 3♥ A♥ 2♠ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 61,
+   "W": 61,
+   "L": 0,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-98",
+   "perm": "A♠ 3♥ A♥ 2♠ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 24,
+   "W": 24,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-99",
+   "perm": "A♠ 3♥ A♥ 2♥ 2♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 2,
+   "GM": 56,
+   "W": 56,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-100",
+   "perm": "A♠ 3♥ A♥ 2♥ 3♠ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 78,
+   "W": 78,
+   "L": 0,
+   "lines": 14,
+   "fewest": 6
+  },
+  {
+   "id": "3223-101",
+   "perm": "A♠ 3♥ A♥ 3♠ 2♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 2,
+   "GM": 62,
+   "W": 62,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-102",
+   "perm": "A♠ 3♥ A♥ 3♠ 2♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 2,
+   "GM": 68,
+   "W": 68,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-103",
+   "perm": "A♠ 3♥ 2♠ A♥ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 13,
+   "W": 10,
+   "L": 3,
+   "lines": 5,
+   "fewest": 8
+  },
+  {
+   "id": "3223-104",
+   "perm": "A♠ 3♥ 2♠ A♥ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-105",
+   "perm": "A♠ 3♥ 2♠ 2♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 24,
+   "W": 24,
+   "L": 0,
+   "lines": 5,
+   "fewest": 6
+  },
+  {
+   "id": "3223-106",
+   "perm": "A♠ 3♥ 2♠ 2♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 40,
+   "W": 40,
+   "L": 0,
+   "lines": 5,
+   "fewest": 6
+  },
+  {
+   "id": "3223-107",
+   "perm": "A♠ 3♥ 2♠ 3♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-108",
+   "perm": "A♠ 3♥ 2♠ 3♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 42,
+   "W": 42,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-109",
+   "perm": "A♠ 3♥ 2♥ A♥ 2♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-110",
+   "perm": "A♠ 3♥ 2♥ A♥ 3♠ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 9,
+   "W": 9,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-111",
+   "perm": "A♠ 3♥ 2♥ 2♠ A♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 32,
+   "W": 32,
+   "L": 0,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-112",
+   "perm": "A♠ 3♥ 2♥ 2♠ 3♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 66,
+   "W": 66,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-113",
+   "perm": "A♠ 3♥ 2♥ 3♠ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 12,
+   "W": 12,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-114",
+   "perm": "A♠ 3♥ 2♥ 3♠ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 86,
+   "W": 86,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-115",
+   "perm": "A♠ 3♥ 3♠ A♥ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 38,
+   "W": 38,
+   "L": 0,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-116",
+   "perm": "A♠ 3♥ 3♠ A♥ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 23,
+   "W": 19,
+   "L": 4,
+   "lines": 10,
+   "fewest": 7
+  },
+  {
+   "id": "3223-117",
+   "perm": "A♠ 3♥ 3♠ 2♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 113,
+   "W": 113,
+   "L": 0,
+   "lines": 8,
+   "fewest": 7
+  },
+  {
+   "id": "3223-118",
+   "perm": "A♠ 3♥ 3♠ 2♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 152,
+   "W": 152,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-119",
+   "perm": "A♠ 3♥ 3♠ 2♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 44,
+   "W": 44,
+   "L": 0,
+   "lines": 10,
+   "fewest": 6
+  },
+  {
+   "id": "3223-120",
+   "perm": "A♠ 3♥ 3♠ 2♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": true,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 76,
+   "W": 76,
+   "L": 0,
+   "lines": 10,
+   "fewest": 6
+  },
+  {
+   "id": "3223-121",
+   "perm": "2♠ A♠ A♥ 2♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 35,
+   "W": 35,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-122",
+   "perm": "2♠ A♠ A♥ 2♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-123",
+   "perm": "2♠ A♠ A♥ 3♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 50,
+   "W": 50,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-124",
+   "perm": "2♠ A♠ A♥ 3♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 93,
+   "W": 93,
+   "L": 0,
+   "lines": 15,
+   "fewest": 6
+  },
+  {
+   "id": "3223-125",
+   "perm": "2♠ A♠ A♥ 3♥ 2♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 76,
+   "W": 76,
+   "L": 0,
+   "lines": 24,
+   "fewest": 6
+  },
+  {
+   "id": "3223-126",
+   "perm": "2♠ A♠ A♥ 3♥ 3♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 59,
+   "W": 59,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-127",
+   "perm": "2♠ A♠ 2♥ A♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-128",
+   "perm": "2♠ A♠ 2♥ A♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-129",
+   "perm": "2♠ A♠ 2♥ 3♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-130",
+   "perm": "2♠ A♠ 2♥ 3♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 41,
+   "W": 41,
+   "L": 0,
+   "lines": 15,
+   "fewest": 6
+  },
+  {
+   "id": "3223-131",
+   "perm": "2♠ A♠ 2♥ 3♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-132",
+   "perm": "2♠ A♠ 2♥ 3♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 22,
+   "W": 22,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-133",
+   "perm": "2♠ A♠ 3♠ A♥ 2♥ 3♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-134",
+   "perm": "2♠ A♠ 3♠ A♥ 3♥ 2♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-135",
+   "perm": "2♠ A♠ 3♠ 2♥ A♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-136",
+   "perm": "2♠ A♠ 3♠ 2♥ 3♥ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-137",
+   "perm": "2♠ A♠ 3♠ 3♥ A♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-138",
+   "perm": "2♠ A♠ 3♠ 3♥ 2♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-139",
+   "perm": "2♠ A♠ 3♥ A♥ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 14,
+   "W": 10,
+   "L": 4,
+   "lines": 6,
+   "fewest": 10
+  },
+  {
+   "id": "3223-140",
+   "perm": "2♠ A♠ 3♥ A♥ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-141",
+   "perm": "2♠ A♠ 3♥ 2♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 26,
+   "W": 24,
+   "L": 2,
+   "lines": 7,
+   "fewest": 8
+  },
+  {
+   "id": "3223-142",
+   "perm": "2♠ A♠ 3♥ 2♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 78,
+   "W": 74,
+   "L": 4,
+   "lines": 7,
+   "fewest": 8
+  },
+  {
+   "id": "3223-143",
+   "perm": "2♠ A♠ 3♥ 3♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-144",
+   "perm": "2♠ A♠ 3♥ 3♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 117,
+   "W": 114,
+   "L": 3,
+   "lines": 9,
+   "fewest": 6
+  },
+  {
+   "id": "3223-145",
+   "perm": "2♠ A♥ A♠ 2♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 54,
+   "W": 54,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-146",
+   "perm": "2♠ A♥ A♠ 2♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 52,
+   "W": 52,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-147",
+   "perm": "2♠ A♥ A♠ 3♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 68,
+   "W": 68,
+   "L": 0,
+   "lines": 11,
+   "fewest": 7
+  },
+  {
+   "id": "3223-148",
+   "perm": "2♠ A♥ A♠ 3♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 67,
+   "W": 67,
+   "L": 0,
+   "lines": 15,
+   "fewest": 6
+  },
+  {
+   "id": "3223-149",
+   "perm": "2♠ A♥ A♠ 3♥ 2♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 144,
+   "W": 144,
+   "L": 0,
+   "lines": 28,
+   "fewest": 6
+  },
+  {
+   "id": "3223-150",
+   "perm": "2♠ A♥ A♠ 3♥ 3♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 52,
+   "W": 52,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-151",
+   "perm": "2♠ A♥ 2♥ A♠ 3♠ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-152",
+   "perm": "2♠ A♥ 2♥ A♠ 3♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-153",
+   "perm": "2♠ A♥ 2♥ 3♠ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-154",
+   "perm": "2♠ A♥ 2♥ 3♠ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-155",
+   "perm": "2♠ A♥ 2♥ 3♥ A♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-156",
+   "perm": "2♠ A♥ 2♥ 3♥ 3♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 10,
+   "W": 8,
+   "L": 2,
+   "lines": 6,
+   "fewest": 8
+  },
+  {
+   "id": "3223-157",
+   "perm": "2♠ A♥ 3♠ A♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-158",
+   "perm": "2♠ A♥ 3♠ A♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-159",
+   "perm": "2♠ A♥ 3♠ 2♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-160",
+   "perm": "2♠ A♥ 3♠ 2♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 15,
+   "W": 14,
+   "L": 1,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-161",
+   "perm": "2♠ A♥ 3♠ 3♥ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 9,
+   "W": 8,
+   "L": 1,
+   "lines": 5,
+   "fewest": 8
+  },
+  {
+   "id": "3223-162",
+   "perm": "2♠ A♥ 3♠ 3♥ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 49,
+   "W": 47,
+   "L": 2,
+   "lines": 19,
+   "fewest": 6
+  },
+  {
+   "id": "3223-163",
+   "perm": "2♠ A♥ 3♥ A♠ 2♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 9,
+   "W": 8,
+   "L": 1,
+   "lines": 3,
+   "fewest": 9
+  },
+  {
+   "id": "3223-164",
+   "perm": "2♠ A♥ 3♥ A♠ 3♠ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 1,
+   "fewest": 9
+  },
+  {
+   "id": "3223-165",
+   "perm": "2♠ A♥ 3♥ 2♥ A♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 14,
+   "W": 12,
+   "L": 2,
+   "lines": 4,
+   "fewest": 9
+  },
+  {
+   "id": "3223-166",
+   "perm": "2♠ A♥ 3♥ 2♥ 3♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 125,
+   "W": 118,
+   "L": 7,
+   "lines": 29,
+   "fewest": 7
+  },
+  {
+   "id": "3223-167",
+   "perm": "2♠ A♥ 3♥ 3♠ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 4,
+   "fewest": 8
+  },
+  {
+   "id": "3223-168",
+   "perm": "2♠ A♥ 3♥ 3♠ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 92,
+   "W": 92,
+   "L": 0,
+   "lines": 17,
+   "fewest": 7
+  },
+  {
+   "id": "3223-169",
+   "perm": "2♠ 2♥ A♠ A♥ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-170",
+   "perm": "2♠ 2♥ A♠ A♥ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 4,
+   "W": 4,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-171",
+   "perm": "2♠ 2♥ A♠ 3♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-172",
+   "perm": "2♠ 2♥ A♠ 3♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 140,
+   "W": 140,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-173",
+   "perm": "2♠ 2♥ A♠ 3♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 34,
+   "W": 34,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-174",
+   "perm": "2♠ 2♥ A♠ 3♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 155,
+   "W": 155,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-175",
+   "perm": "2♠ 2♥ A♥ A♠ 3♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 4,
+   "W": 4,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-176",
+   "perm": "2♠ 2♥ A♥ A♠ 3♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-177",
+   "perm": "2♠ 2♥ A♥ 3♠ A♠ 3♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 34,
+   "W": 34,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-178",
+   "perm": "2♠ 2♥ A♥ 3♠ 3♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 185,
+   "W": 185,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-179",
+   "perm": "2♠ 2♥ A♥ 3♥ A♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-180",
+   "perm": "2♠ 2♥ A♥ 3♥ 3♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 205,
+   "W": 205,
+   "L": 0,
+   "lines": 18,
+   "fewest": 6
+  },
+  {
+   "id": "3223-181",
+   "perm": "2♠ 2♥ 3♠ A♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-182",
+   "perm": "2♠ 2♥ 3♠ A♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-183",
+   "perm": "2♠ 2♥ 3♠ A♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-184",
+   "perm": "2♠ 2♥ 3♠ A♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-185",
+   "perm": "2♠ 2♥ 3♠ 3♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-186",
+   "perm": "2♠ 2♥ 3♠ 3♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 80,
+   "W": 80,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-187",
+   "perm": "2♠ 2♥ 3♥ A♠ A♥ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 2,
+   "W": 1,
+   "L": 1,
+   "lines": 2,
+   "fewest": 9
+  },
+  {
+   "id": "3223-188",
+   "perm": "2♠ 2♥ 3♥ A♠ 3♠ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 9
+  },
+  {
+   "id": "3223-189",
+   "perm": "2♠ 2♥ 3♥ A♥ A♠ 3♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 5,
+   "W": 4,
+   "L": 1,
+   "lines": 2,
+   "fewest": 9
+  },
+  {
+   "id": "3223-190",
+   "perm": "2♠ 2♥ 3♥ A♥ 3♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 29,
+   "W": 29,
+   "L": 0,
+   "lines": 10,
+   "fewest": 7
+  },
+  {
+   "id": "3223-191",
+   "perm": "2♠ 2♥ 3♥ 3♠ A♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 153,
+   "W": 153,
+   "L": 0,
+   "lines": 19,
+   "fewest": 7
+  },
+  {
+   "id": "3223-192",
+   "perm": "2♠ 2♥ 3♥ 3♠ A♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 198,
+   "W": 198,
+   "L": 0,
+   "lines": 19,
+   "fewest": 7
+  },
+  {
+   "id": "3223-193",
+   "perm": "2♠ 3♠ A♠ A♥ 2♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 2,
+   "L": 3,
+   "lines": 3,
+   "fewest": 8
+  },
+  {
+   "id": "3223-194",
+   "perm": "2♠ 3♠ A♠ A♥ 3♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 4,
+   "L": 1,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-195",
+   "perm": "2♠ 3♠ A♠ 2♥ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-196",
+   "perm": "2♠ 3♠ A♠ 2♥ 3♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-197",
+   "perm": "2♠ 3♠ A♠ 3♥ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 32,
+   "W": 31,
+   "L": 1,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-198",
+   "perm": "2♠ 3♠ A♠ 3♥ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 106,
+   "W": 106,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-199",
+   "perm": "2♠ 3♠ A♥ A♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-200",
+   "perm": "2♠ 3♠ A♥ A♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-201",
+   "perm": "2♠ 3♠ A♥ 2♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-202",
+   "perm": "2♠ 3♠ A♥ 2♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 26,
+   "W": 26,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-203",
+   "perm": "2♠ 3♠ A♥ 3♥ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 29,
+   "W": 29,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-204",
+   "perm": "2♠ 3♠ A♥ 3♥ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 95,
+   "W": 95,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-205",
+   "perm": "2♠ 3♠ 2♥ A♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-206",
+   "perm": "2♠ 3♠ 2♥ A♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 6
+  },
+  {
+   "id": "3223-207",
+   "perm": "2♠ 3♠ 2♥ A♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-208",
+   "perm": "2♠ 3♠ 2♥ A♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-209",
+   "perm": "2♠ 3♠ 2♥ 3♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 22,
+   "W": 22,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-210",
+   "perm": "2♠ 3♠ 2♥ 3♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-211",
+   "perm": "2♠ 3♠ 3♥ A♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 9
+  },
+  {
+   "id": "3223-212",
+   "perm": "2♠ 3♠ 3♥ A♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 55,
+   "W": 55,
+   "L": 0,
+   "lines": 9,
+   "fewest": 6
+  },
+  {
+   "id": "3223-213",
+   "perm": "2♠ 3♠ 3♥ A♥ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 9
+  },
+  {
+   "id": "3223-214",
+   "perm": "2♠ 3♠ 3♥ A♥ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 36,
+   "W": 30,
+   "L": 6,
+   "lines": 10,
+   "fewest": 8
+  },
+  {
+   "id": "3223-215",
+   "perm": "2♠ 3♠ 3♥ 2♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 122,
+   "W": 122,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-216",
+   "perm": "2♠ 3♠ 3♥ 2♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 182,
+   "W": 182,
+   "L": 0,
+   "lines": 16,
+   "fewest": 6
+  },
+  {
+   "id": "3223-217",
+   "perm": "2♠ 3♥ A♠ A♥ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 12,
+   "L": 5,
+   "lines": 8,
+   "fewest": 8
+  },
+  {
+   "id": "3223-218",
+   "perm": "2♠ 3♥ A♠ A♥ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-219",
+   "perm": "2♠ 3♥ A♠ 2♥ A♥ 3♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 31,
+   "W": 31,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-220",
+   "perm": "2♠ 3♥ A♠ 2♥ 3♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 75,
+   "W": 75,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-221",
+   "perm": "2♠ 3♥ A♠ 3♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-222",
+   "perm": "2♠ 3♥ A♠ 3♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 120,
+   "W": 120,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-223",
+   "perm": "2♠ 3♥ A♥ A♠ 2♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-224",
+   "perm": "2♠ 3♥ A♥ A♠ 3♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 5,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-225",
+   "perm": "2♠ 3♥ A♥ 2♥ A♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-226",
+   "perm": "2♠ 3♥ A♥ 2♥ 3♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 78,
+   "W": 78,
+   "L": 0,
+   "lines": 14,
+   "fewest": 6
+  },
+  {
+   "id": "3223-227",
+   "perm": "2♠ 3♥ A♥ 3♠ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 38,
+   "W": 38,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-228",
+   "perm": "2♠ 3♥ A♥ 3♠ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 96,
+   "W": 96,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-229",
+   "perm": "2♠ 3♥ 2♥ A♠ A♥ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-230",
+   "perm": "2♠ 3♥ 2♥ A♠ 3♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-231",
+   "perm": "2♠ 3♥ 2♥ A♥ A♠ 3♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-232",
+   "perm": "2♠ 3♥ 2♥ A♥ 3♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 9,
+   "W": 9,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-233",
+   "perm": "2♠ 3♥ 2♥ 3♠ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 60,
+   "W": 60,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-234",
+   "perm": "2♠ 3♥ 2♥ 3♠ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 42,
+   "W": 42,
+   "L": 0,
+   "lines": 9,
+   "fewest": 6
+  },
+  {
+   "id": "3223-235",
+   "perm": "2♠ 3♥ 3♠ A♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-236",
+   "perm": "2♠ 3♥ 3♠ A♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 14,
+   "W": 14,
+   "L": 0,
+   "lines": 5,
+   "fewest": 6
+  },
+  {
+   "id": "3223-237",
+   "perm": "2♠ 3♥ 3♠ A♥ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 15,
+   "W": 15,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-238",
+   "perm": "2♠ 3♥ 3♠ A♥ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 26,
+   "W": 24,
+   "L": 2,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-239",
+   "perm": "2♠ 3♥ 3♠ 2♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 25,
+   "W": 25,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  },
+  {
+   "id": "3223-240",
+   "perm": "2♠ 3♥ 3♠ 2♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 46,
+   "W": 46,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  },
+  {
+   "id": "3223-241",
+   "perm": "3♠ A♠ A♥ 2♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-242",
+   "perm": "3♠ A♠ A♥ 2♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 78,
+   "W": 78,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-243",
+   "perm": "3♠ A♠ A♥ 2♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-244",
+   "perm": "3♠ A♠ A♥ 2♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-245",
+   "perm": "3♠ A♠ A♥ 3♥ 2♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 66,
+   "W": 66,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-246",
+   "perm": "3♠ A♠ A♥ 3♥ 2♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 17,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-247",
+   "perm": "3♠ A♠ 2♠ A♥ 2♥ 3♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-248",
+   "perm": "3♠ A♠ 2♠ A♥ 3♥ 2♥",
+   "D1_blockers": 3,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-249",
+   "perm": "3♠ A♠ 2♠ 2♥ A♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-250",
+   "perm": "3♠ A♠ 2♠ 2♥ 3♥ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-251",
+   "perm": "3♠ A♠ 2♠ 3♥ A♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-252",
+   "perm": "3♠ A♠ 2♠ 3♥ 2♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-253",
+   "perm": "3♠ A♠ 2♥ A♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-254",
+   "perm": "3♠ A♠ 2♥ A♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-255",
+   "perm": "3♠ A♠ 2♥ 2♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-256",
+   "perm": "3♠ A♠ 2♥ 2♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 72,
+   "W": 72,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-257",
+   "perm": "3♠ A♠ 2♥ 3♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-258",
+   "perm": "3♠ A♠ 2♥ 3♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 60,
+   "W": 60,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-259",
+   "perm": "3♠ A♠ 3♥ A♥ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-260",
+   "perm": "3♠ A♠ 3♥ A♥ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-261",
+   "perm": "3♠ A♠ 3♥ 2♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 3,
+   "W": 1,
+   "L": 2,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-262",
+   "perm": "3♠ A♠ 3♥ 2♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 2,
+   "L": 3,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-263",
+   "perm": "3♠ A♠ 3♥ 2♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-264",
+   "perm": "3♠ A♠ 3♥ 2♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-265",
+   "perm": "3♠ A♥ A♠ 2♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-266",
+   "perm": "3♠ A♥ A♠ 2♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 57,
+   "W": 57,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-267",
+   "perm": "3♠ A♥ A♠ 2♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-268",
+   "perm": "3♠ A♥ A♠ 2♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 17,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-269",
+   "perm": "3♠ A♥ A♠ 3♥ 2♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 64,
+   "W": 64,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-270",
+   "perm": "3♠ A♥ A♠ 3♥ 2♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 45,
+   "W": 45,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-271",
+   "perm": "3♠ A♥ 2♠ A♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-272",
+   "perm": "3♠ A♥ 2♠ A♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-273",
+   "perm": "3♠ A♥ 2♠ 2♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-274",
+   "perm": "3♠ A♥ 2♠ 2♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 10,
+   "W": 10,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-275",
+   "perm": "3♠ A♥ 2♠ 3♥ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-276",
+   "perm": "3♠ A♥ 2♠ 3♥ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 36,
+   "W": 36,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-277",
+   "perm": "3♠ A♥ 2♥ A♠ 2♠ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 13,
+   "W": 10,
+   "L": 3,
+   "lines": 5,
+   "fewest": 9
+  },
+  {
+   "id": "3223-278",
+   "perm": "3♠ A♥ 2♥ A♠ 3♥ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-279",
+   "perm": "3♠ A♥ 2♥ 2♠ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 24,
+   "W": 24,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-280",
+   "perm": "3♠ A♥ 2♥ 2♠ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 57,
+   "W": 57,
+   "L": 0,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-281",
+   "perm": "3♠ A♥ 2♥ 3♥ A♠ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-282",
+   "perm": "3♠ A♥ 2♥ 3♥ 2♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 73,
+   "W": 72,
+   "L": 1,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-283",
+   "perm": "3♠ A♥ 3♥ A♠ 2♠ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-284",
+   "perm": "3♠ A♥ 3♥ A♠ 2♥ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-285",
+   "perm": "3♠ A♥ 3♥ 2♠ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-286",
+   "perm": "3♠ A♥ 3♥ 2♠ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-287",
+   "perm": "3♠ A♥ 3♥ 2♥ A♠ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 3,
+   "W": 1,
+   "L": 2,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-288",
+   "perm": "3♠ A♥ 3♥ 2♥ 2♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 2,
+   "L": 3,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-289",
+   "perm": "3♠ 2♠ A♠ A♥ 2♥ 3♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 2,
+   "L": 3,
+   "lines": 3,
+   "fewest": 8
+  },
+  {
+   "id": "3223-290",
+   "perm": "3♠ 2♠ A♠ A♥ 3♥ 2♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 6,
+   "L": 1,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-291",
+   "perm": "3♠ 2♠ A♠ 2♥ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-292",
+   "perm": "3♠ 2♠ A♠ 2♥ 3♥ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-293",
+   "perm": "3♠ 2♠ A♠ 3♥ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 78,
+   "W": 77,
+   "L": 1,
+   "lines": 5,
+   "fewest": 7
+  },
+  {
+   "id": "3223-294",
+   "perm": "3♠ 2♠ A♠ 3♥ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 129,
+   "W": 129,
+   "L": 0,
+   "lines": 7,
+   "fewest": 6
+  },
+  {
+   "id": "3223-295",
+   "perm": "3♠ 2♠ A♥ A♠ 2♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-296",
+   "perm": "3♠ 2♠ A♥ A♠ 3♥ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 3,
+   "fewest": 6
+  },
+  {
+   "id": "3223-297",
+   "perm": "3♠ 2♠ A♥ 2♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-298",
+   "perm": "3♠ 2♠ A♥ 2♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 14,
+   "W": 14,
+   "L": 0,
+   "lines": 3,
+   "fewest": 7
+  },
+  {
+   "id": "3223-299",
+   "perm": "3♠ 2♠ A♥ 3♥ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 66,
+   "W": 66,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-300",
+   "perm": "3♠ 2♠ A♥ 3♥ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 93,
+   "W": 93,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-301",
+   "perm": "3♠ 2♠ 2♥ A♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-302",
+   "perm": "3♠ 2♠ 2♥ A♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 3,
+   "fewest": 6
+  },
+  {
+   "id": "3223-303",
+   "perm": "3♠ 2♠ 2♥ A♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-304",
+   "perm": "3♠ 2♠ 2♥ A♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 4,
+   "W": 4,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-305",
+   "perm": "3♠ 2♠ 2♥ 3♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 73,
+   "W": 73,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-306",
+   "perm": "3♠ 2♠ 2♥ 3♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 68,
+   "W": 68,
+   "L": 0,
+   "lines": 11,
+   "fewest": 6
+  },
+  {
+   "id": "3223-307",
+   "perm": "3♠ 2♠ 3♥ A♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-308",
+   "perm": "3♠ 2♠ 3♥ A♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 5,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-309",
+   "perm": "3♠ 2♠ 3♥ A♥ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-310",
+   "perm": "3♠ 2♠ 3♥ A♥ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-311",
+   "perm": "3♠ 2♠ 3♥ 2♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-312",
+   "perm": "3♠ 2♠ 3♥ 2♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-313",
+   "perm": "3♠ 2♥ A♠ A♥ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-314",
+   "perm": "3♠ 2♥ A♠ A♥ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 5,
+   "W": 5,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-315",
+   "perm": "3♠ 2♥ A♠ 2♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 8
+  },
+  {
+   "id": "3223-316",
+   "perm": "3♠ 2♥ A♠ 2♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 63,
+   "W": 63,
+   "L": 0,
+   "lines": 13,
+   "fewest": 6
+  },
+  {
+   "id": "3223-317",
+   "perm": "3♠ 2♥ A♠ 3♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 38,
+   "W": 38,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-318",
+   "perm": "3♠ 2♥ A♠ 3♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 90,
+   "W": 90,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-319",
+   "perm": "3♠ 2♥ A♥ A♠ 2♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 12,
+   "L": 5,
+   "lines": 8,
+   "fewest": 8
+  },
+  {
+   "id": "3223-320",
+   "perm": "3♠ 2♥ A♥ A♠ 3♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-321",
+   "perm": "3♠ 2♥ A♥ 2♠ A♠ 3♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 1,
+   "GM": 31,
+   "W": 31,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-322",
+   "perm": "3♠ 2♥ A♥ 2♠ 3♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 75,
+   "W": 75,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-323",
+   "perm": "3♠ 2♥ A♥ 3♥ A♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 0,
+   "L": 2,
+   "lines": 2,
+   "fewest": null
+  },
+  {
+   "id": "3223-324",
+   "perm": "3♠ 2♥ A♥ 3♥ 2♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 125,
+   "W": 125,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-325",
+   "perm": "3♠ 2♥ 2♠ A♠ A♥ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-326",
+   "perm": "3♠ 2♥ 2♠ A♠ 3♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-327",
+   "perm": "3♠ 2♥ 2♠ A♥ A♠ 3♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "3♥",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 0,
+   "L": 1,
+   "lines": 1,
+   "fewest": null
+  },
+  {
+   "id": "3223-328",
+   "perm": "3♠ 2♥ 2♠ A♥ 3♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 3,
+   "W": 3,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-329",
+   "perm": "3♠ 2♥ 2♠ 3♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 18,
+   "W": 18,
+   "L": 0,
+   "lines": 8,
+   "fewest": 6
+  },
+  {
+   "id": "3223-330",
+   "perm": "3♠ 2♥ 2♠ 3♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 48,
+   "W": 48,
+   "L": 0,
+   "lines": 12,
+   "fewest": 6
+  },
+  {
+   "id": "3223-331",
+   "perm": "3♠ 2♥ 3♥ A♠ A♥ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-332",
+   "perm": "3♠ 2♥ 3♥ A♠ 2♠ A♥",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 1,
+   "W": 1,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-333",
+   "perm": "3♠ 2♥ 3♥ A♥ A♠ 2♠",
+   "D1_blockers": 2,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 4,
+   "W": 4,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-334",
+   "perm": "3♠ 2♥ 3♥ A♥ 2♠ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 7,
+   "W": 7,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-335",
+   "perm": "3♠ 2♥ 3♥ 2♠ A♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-336",
+   "perm": "3♠ 2♥ 3♥ 2♠ A♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 2,
+   "W": 2,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-337",
+   "perm": "3♠ 3♥ A♠ A♥ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 16,
+   "W": 16,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-338",
+   "perm": "3♠ 3♥ A♠ A♥ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 12,
+   "W": 10,
+   "L": 2,
+   "lines": 4,
+   "fewest": 7
+  },
+  {
+   "id": "3223-339",
+   "perm": "3♠ 3♥ A♠ 2♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 38,
+   "W": 38,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-340",
+   "perm": "3♠ 3♥ A♠ 2♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 53,
+   "W": 53,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-341",
+   "perm": "3♠ 3♥ A♠ 2♥ A♥ 2♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 23,
+   "W": 23,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-342",
+   "perm": "3♠ 3♥ A♠ 2♥ 2♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 2,
+   "GM": 32,
+   "W": 32,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-343",
+   "perm": "3♠ 3♥ A♥ A♠ 2♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 21,
+   "W": 18,
+   "L": 3,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-344",
+   "perm": "3♠ 3♥ A♥ A♠ 2♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-345",
+   "perm": "3♠ 3♥ A♥ 2♠ A♠ 2♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 1,
+   "GM": 53,
+   "W": 53,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  },
+  {
+   "id": "3223-346",
+   "perm": "3♠ 3♥ A♥ 2♠ 2♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 45,
+   "W": 45,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  },
+  {
+   "id": "3223-347",
+   "perm": "3♠ 3♥ A♥ 2♥ A♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-348",
+   "perm": "3♠ 3♥ A♥ 2♥ 2♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 2,
+   "GM": 40,
+   "W": 40,
+   "L": 0,
+   "lines": 5,
+   "fewest": 6
+  },
+  {
+   "id": "3223-349",
+   "perm": "3♠ 3♥ 2♠ A♠ A♥ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-350",
+   "perm": "3♠ 3♥ 2♠ A♠ 2♥ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 8,
+   "W": 8,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-351",
+   "perm": "3♠ 3♥ 2♠ A♥ A♠ 2♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♥",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 7
+  },
+  {
+   "id": "3223-352",
+   "perm": "3♠ 3♥ 2♠ A♥ 2♥ A♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 9,
+   "W": 8,
+   "L": 1,
+   "lines": 2,
+   "fewest": 7
+  },
+  {
+   "id": "3223-353",
+   "perm": "3♠ 3♥ 2♠ 2♥ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 11,
+   "W": 11,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-354",
+   "perm": "3♠ 3♥ 2♠ 2♥ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 17,
+   "W": 17,
+   "L": 0,
+   "lines": 2,
+   "fewest": 6
+  },
+  {
+   "id": "3223-355",
+   "perm": "3♠ 3♥ 2♥ A♠ A♥ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-356",
+   "perm": "3♠ 3♥ 2♥ A♠ 2♠ A♥",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 21,
+   "W": 18,
+   "L": 3,
+   "lines": 6,
+   "fewest": 7
+  },
+  {
+   "id": "3223-357",
+   "perm": "3♠ 3♥ 2♥ A♥ A♠ 2♠",
+   "D1_blockers": 1,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "2♠",
+   "D4_aces_exposed": 0,
+   "GM": 6,
+   "W": 6,
+   "L": 0,
+   "lines": 1,
+   "fewest": 8
+  },
+  {
+   "id": "3223-358",
+   "perm": "3♠ 3♥ 2♥ A♥ 2♠ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 24,
+   "W": 24,
+   "L": 0,
+   "lines": 4,
+   "fewest": 6
+  },
+  {
+   "id": "3223-359",
+   "perm": "3♠ 3♥ 2♥ 2♠ A♠ A♥",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♥",
+   "D4_aces_exposed": 1,
+   "GM": 61,
+   "W": 61,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  },
+  {
+   "id": "3223-360",
+   "perm": "3♠ 3♥ 2♥ 2♠ A♥ A♠",
+   "D1_blockers": 0,
+   "D2_first_col_ace": false,
+   "D3_waste_top": "A♠",
+   "D4_aces_exposed": 1,
+   "GM": 43,
+   "W": 43,
+   "L": 0,
+   "lines": 6,
+   "fewest": 6
+  }
+ ]
+}

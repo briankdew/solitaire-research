@@ -1,0 +1,391 @@
+<title>Vertical Play Mock-up</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Mono&text=%E2%99%A0%E2%99%A5%E2%99%A3%E2%99%A6&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&text=A23456789XJQK%E2%99%A0%E2%99%A5%E2%99%A3%E2%99%A6&display=swap">
+<style>
+/* Layout: same felt look as the play diagrams; locations are columns, plays flow downward, forks step right */
+:root {
+  --felt: #2f6b57; --felt-dark: #215042; --slot-line: #6a887a;
+  --chalk: #e2e2d5; --gold: #f1c232; --gold-dim: #bf9000;
+  --back: #7c1e30; --back-line: #cccccc; --face: #fbfaf5; --face-recede: #b7b7b7; --face-played: #e5ddaf; --select: #000; --ink: #1c1f24; --red: #b3261e;
+  --sans: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --card-font: "Libertinus Mono", monospace;
+  --hdr-setup: #215042; --area-shuffles: #295f4e;
+  color-scheme: dark;
+}
+body { background: var(--felt); color: var(--chalk); font-family: var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px; }
+main { display: grid; gap: 12px; max-width: 1100px; }
+h1 { font-size: 1.2rem; margin: 0; }
+p { margin: 0; line-height: 1.5; max-width: 70ch; opacity: .85; }
+.panel { background: var(--area-shuffles); border-radius: 8px; padding: 8px 14px 14px; display: grid; gap: 8px; }
+.panel h2 { font-size: 1.05rem; margin: 6px 0 0; }
+/* Column labels sit above the diagram box, in their own strip aligned with the columns */
+.labels { display: block; margin-bottom: 2px; overflow: visible; }
+.labels text { filter: drop-shadow(0 2px 2px rgb(0 0 0 / .5)); }
+.strip { overflow-x: auto; width: max-content; max-width: 100%; }
+svg { display: block; }
+svg text { font-family: var(--sans); }
+main { margin-top: 24px; }
+.zoom { position: fixed; z-index: 20;
+  top: calc(10px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px));
+  display: flex; align-items: center; gap: 4px; padding: 3px 6px;
+  background: var(--felt-dark); border: 1px solid var(--slot-line); border-radius: 6px;
+  color: var(--chalk); opacity: 0.7; transition: opacity .15s; }
+.zoom:hover, .zoom:focus-within { opacity: 1; }
+.zoom svg { width: 14px; height: 14px; }
+.zoom select { background: transparent; color: var(--chalk); border: 0; font: 12px var(--sans); cursor: pointer; }
+.zoom select option { background: var(--felt-dark); }
+.zoom select:focus-visible { outline: 1px solid var(--gold); }
+</style>
+
+<label class="zoom" title="Zoom">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M10 10l4.5 4.5" stroke-linecap="round"/></svg>
+  <select id="zoom" aria-label="Zoom">
+    <option value="50">50%</option><option value="67">67%</option><option value="75">75%</option>
+    <option value="80">80%</option><option value="90">90%</option><option value="100" selected>100%</option>
+    <option value="110">110%</option><option value="125">125%</option><option value="150">150%</option>
+    <option value="175">175%</option><option value="200">200%</option>
+  </select>
+</label>
+
+<main>
+  <h1>Vertical layout mock-up: a play between two nodes of a 52-card game</h1>
+  <p>Locations are columns inside the node (stock, waste, tableau a–g, one home pile per suit). Every pile stacks downward like a real tableau: face-down cards first, then face-up cards. Plays would flow down to the next node, and forks step right.</p>
+  <div class="panel">
+    <h2>K473 example: nodes 01-032 → 01-033</h2>
+    <svg class="labels" id="labels" aria-hidden="true"></svg>
+    <div class="strip"><svg id="play" role="img" aria-label="Nodes 01-032 and 01-033 of a 52-card game, with the play between them"></svg></div>
+  </div>
+  <div class="panel">
+    <h2>Shuffle 2223-7</h2>
+    <div class="strip">
+      <svg class="labels" id="labels2223" aria-hidden="true"></svg>
+      <svg id="tree2223" role="img" aria-label="Play diagram for shuffle 2223-7"></svg>
+    </div>
+  </div>
+</main>
+
+<script>
+// ---------- Data: two consecutive nodes of a 52-card game (from the reference image) ----------
+// Piles bottom → top. hid = face-down count per column. Court-card suits hidden in the image were filled in by elimination.
+// The play: J♦ (with the run J♦…2♠ on it) from g onto Q♠ in a, revealing J♥ in g.
+const NODES = [
+  { id: [1, 32], s: 3, w: ["K♣", "6♣", "6♦"],
+    cols: { a: ["K♥", "Q♠"], b: ["4♥"], c: ["9♦", "8♠", "7♥"], d: ["K♦", "Q♣"], e: ["Q♦"],
+            f: ["Q♥", "J♣", "X♥", "9♠", "8♥", "7♠", "6♥"], g: ["J♦", "X♣", "9♥", "8♣", "7♦", "6♠", "5♦", "4♣", "3♥", "2♠"] },
+    hid: { b: 1, e: 2, f: 4, g: 4 },
+    h: { "♠": ["A♠"], "♥": ["A♥", "2♥"], "♣": ["A♣", "2♣", "3♣"], "♦": ["A♦", "2♦", "3♦", "4♦"] },
+    pick: { loc: "g", card: "J♦" } },            // pick-up: J♦ and everything on it
+  { id: [1, 33], s: 3, w: ["K♣", "6♣", "6♦"],
+    cols: { a: ["K♥", "Q♠", "J♦", "X♣", "9♥", "8♣", "7♦", "6♠", "5♦", "4♣", "3♥", "2♠"], b: ["4♥"], c: ["9♦", "8♠", "7♥"], d: ["K♦", "Q♣"], e: ["Q♦"],
+            f: ["Q♥", "J♣", "X♥", "9♠", "8♥", "7♠", "6♥"], g: ["J♥"] },
+    hid: { b: 1, e: 2, f: 3, g: 3 },
+    h: { "♠": ["A♠"], "♥": ["A♥", "2♥"], "♣": ["A♣", "2♣", "3♣"], "♦": ["A♦", "2♦", "3♦", "4♦"] },
+    put: { loc: "a", card: "J♦" } },             // put-down: the run now starting at J♦
+];
+NODES[1].hid.f = 4;   // f is unchanged by the play
+
+// ---------- Geometry ----------
+const SUITS = ["♠", "♥", "♣", "♦"], RED = new Set(["♥", "♦"]), PT = 4 / 3;
+const F_ID = 8 * PT, F_LOC = 11 * PT, F_STOCK = 8 * PT, F_CARD = 10 * PT, F_SUIT = 10.5 * PT;
+const SW = 21, SH = 14, OVERLAP = 1, DY = SH - OVERLAP;   // wide cards, stacked downward
+// Rank and suit placed by the top of the glyph, 2px below the card's top edge (per-glyph baselines from the font)
+const RANK_BASE = { A: 10.48, 2: 10.91, 3: 10.92, 4: 10.92, 5: 10.95, 6: 10.95, 7: 10.99, 8: 10.91, 9: 10.92, X: 10.35, J: 10.35, Q: 10.48, K: 10.35 };
+const SUIT_BASE = { "♠": 11.01, "♥": 10.49, "♣": 10.65, "♦": 10.83 };
+// Gaps: inside the tableau and inside home wide enough for a glow on either side of a column;
+// the group gaps (s/w → a, g → h♠) stay wider than those
+const GAP_IN = 9, GAP_GROUP = 18;
+const GLOW_OFF = 3.5, GLOW_BLUR = 2;   // glow: a column-shaped shape pushed sideways, blurred, coloured
+const PAD_X = 7, PAD_TOP = 6, PAD_BOT = 6, PANEL_GAP = 22, ID_ABOVE = 14;   // node ID sits just above its panel
+const NS = "http://www.w3.org/2000/svg";
+const svg = document.getElementById("play");
+const el = (tag, attrs, text, parent = svg) => { const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; parent.appendChild(e); return e; };
+const pad = (n, w) => String(n).padStart(w, "0");
+const split = c => ({ rank: c[0], suit: c[1] });
+
+const locs = [{ k: "w" }, ..."abcdefg".split("").map(c => ({ k: "c", col: c })), ...SUITS.map(s => ({ k: "h", suit: s }))];
+const locX = []; { let x = PAD_X; locs.forEach((l, i) => { locX[i] = x; const nx = locs[i + 1];
+  x += SW + (!nx ? 0 : (l.k !== nx.k ? GAP_GROUP : GAP_IN)); }); }
+const W = locX[locs.length - 1] + SW + PAD_X;
+const idxOf = loc => locs.findIndex(l => (loc === "w" && l.k === "w") || l.col === loc);
+
+// What each location shows, top → bottom: counter card (stock / face-down count) if any, then face-up cards
+const down = (n, l) => (n.hid && n.hid[l.col]) || 0;
+const counter = (n, l) => l.k === "w" ? 1 : l.k === "c" && down(n, l) ? 1 : 0;
+const pile = (n, l) => l.k === "w" ? n.w : l.k === "c" ? n.cols[l.col] : (n.h[l.suit] || []).slice(-1);
+const depth = (n, l) => Math.max(1, counter(n, l) + pile(n, l).length);
+const pileH = n => SH + (Math.max(...locs.map(l => depth(n, l))) - 1) * DY;
+
+// Panel positions (each node is its own felt panel; all panels share one SVG so connectors can cross between them)
+let y = 0;
+NODES.forEach(n => { n.top = y + ID_ABOVE; n.cardsTop = n.top + PAD_TOP; n.h_ = PAD_TOP + pileH(n) + PAD_BOT; y = n.top + n.h_ + PANEL_GAP; });
+const H = y - PANEL_GAP;
+svg.setAttribute("width", W); svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+// ---------- Filters ----------
+const defs = el("defs", {});
+const sh = el("filter", { id: "sh", x: "-30%", y: "-30%", width: "160%", height: "160%" }, null, defs);
+el("feDropShadow", { dx: 0, dy: 2, stdDeviation: 2, "flood-color": "#000", "flood-opacity": 0.5, result: "down" }, null, sh);
+el("feDropShadow", { in: "SourceGraphic", dx: 0, dy: -0.6, stdDeviation: 2, "flood-color": "#000", "flood-opacity": 0.55, result: "edge" }, null, sh);
+const shm = el("feMerge", {}, null, sh); el("feMergeNode", { in: "down" }, null, shm); el("feMergeNode", { in: "edge" }, null, shm);
+// Glow (as in the reference drawing): blur the shape's alpha by 2, colour it solid, show only the glow
+function glowFilter(id, color) {
+  const f = el("filter", { id, x: "-100%", y: "-10%", width: "300%", height: "120%", "color-interpolation-filters": "sRGB" }, null, defs);
+  el("feGaussianBlur", { in: "SourceAlpha", stdDeviation: GLOW_BLUR, result: "b" }, null, f);
+  el("feFlood", { "flood-color": color, "flood-opacity": 1, result: "c" }, null, f);
+  el("feComposite", { in: "c", in2: "b", operator: "in" }, null, f);
+}
+glowFilter("glow-pick", "#fbfaf5");   // pick-up: card-face white
+glowFilter("glow-put", "#bf9000");    // put-down: connector gold
+const shadow = "url(#sh)";
+
+// ---------- Column labels (separate strip above the panels) ----------
+const lab = document.getElementById("labels"), LH = 24;
+lab.setAttribute("width", W); lab.setAttribute("height", LH); lab.setAttribute("viewBox", `0 0 ${W} ${LH}`);
+locs.forEach((l, i) => {
+  const t = el("text", { x: locX[i] + SW / 2, y: LH - 6, "text-anchor": "middle", fill: "var(--chalk)", "font-size": F_LOC, "font-weight": 700 },
+    l.k === "c" ? l.col : l.k === "w" ? "s/w" : "h", lab);
+  if (l.k === "h") el("tspan", { dx: 1, dy: -2.6, "font-size": 10 * PT, "font-weight": 400, fill: RED.has(l.suit) ? "var(--red)" : "var(--ink)", style: "font-family: 'PT Mono', monospace" }, l.suit, t);
+});
+
+// ---------- Cards ----------
+const emptySlot = (x, y) => el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--felt-dark)", stroke: "var(--slot-line)", "stroke-width": 0.9 });
+function faceCard(x, y, card) {
+  const c = split(card), g = el("g", { filter: shadow }), ink = RED.has(c.suit) ? "var(--red)" : "var(--ink)";
+  el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--face)" }, null, g);
+  const face = { "text-anchor": "middle", "font-size": F_CARD, fill: ink, stroke: ink, "stroke-width": 0.3, "stroke-linejoin": "round", style: "font-family: var(--card-font)" };
+  el("text", { x: x + 5.63, y: y + RANK_BASE[c.rank], ...face }, c.rank, g);
+  el("text", { x: x + 15.36, y: y + SUIT_BASE[c.suit], ...face, "font-size": F_SUIT }, c.suit, g);
+}
+function counterCard(x, y, n) {
+  if (n === 0) return el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "#7a3c44", stroke: "var(--slot-line)" });
+  const g = el("g", { filter: shadow });
+  el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--back)", stroke: "var(--back-line)" }, null, g);
+  el("text", { x: x + SW / 2, y: y + (SH - OVERLAP) / 2 + 3.9, "text-anchor": "middle", "font-size": F_STOCK, fill: "var(--chalk)" }, n, g);
+}
+
+// Vertical extent of a run (from `card` to the bottom of the pile) in a node
+function runSpan(n, loc, card) {
+  const l = locs[idxOf(loc)], p = pile(n, l), k = p.indexOf(card), j0 = counter(n, l) + k;
+  return { x: locX[idxOf(loc)], top: n.cardsTop + j0 * DY, bottom: n.cardsTop + (counter(n, l) + p.length - 1) * DY + SH };
+}
+// Glow: a run-shaped rectangle pushed GLOW_OFF to one side, drawn under the cards, so only its blurred edge shows
+function glow(n, mark, side, filterId) {
+  const r = runSpan(n, mark.loc, mark.card);
+  el("rect", { x: r.x + side * GLOW_OFF, y: r.top, width: SW, height: r.bottom - r.top, rx: 2, fill: "#000", filter: `url(#${filterId})`, "pointer-events": "none" });
+}
+
+function drawNode(n) {
+  el("rect", { x: 0, y: n.top, width: W, height: n.h_, rx: 8, fill: "var(--felt)" });   // panel
+  // Node ID: plain text just above the panel
+  const id = el("text", { x: locX[0], y: n.top - 4, "font-size": F_ID, fill: "var(--chalk)" });
+  el("tspan", { fill: "var(--gold)" }, pad(n.id[0], 2), id); el("tspan", {}, "-" + pad(n.id[1], 3), id);
+  // Glows go under the cards
+  if (n.pick) glow(n, n.pick, +1, "glow-pick");
+  if (n.put) glow(n, n.put, -1, "glow-put");
+  locs.forEach((l, i) => {
+    const x = locX[i]; let j = 0;
+    const p = pile(n, l);
+    if (!p.length && !counter(n, l)) return emptySlot(x, n.cardsTop);
+    if (l.k === "w") counterCard(x, n.cardsTop, n.s), j = 1;
+    else if (counter(n, l)) counterCard(x, n.cardsTop, down(n, l)), j = 1;
+    p.forEach((card, k) => faceCard(x, n.cardsTop + (j + k) * DY, card));
+  });
+}
+
+// Connector: from the bottom of the picked-up run to the top of the destination column in the next node
+const AH_L = 9, AH_W = 6.3;
+function connector(a, b) {
+  const src = runSpan(a, a.pick.loc, a.pick.card);
+  const x1 = src.x + SW / 2, y1 = src.bottom + 1;
+  const x2 = locX[idxOf(b.put.loc)] + SW / 2, y2 = b.cardsTop - 1;
+  const k = (y2 - y1) * 0.6, P = [[x1, y1], [x1, y1 + k], [x2, y2 - k], [x2, y2]];
+  const at = t => { const u = 1 - t; return [0, 1].map(i => u*u*u*P[0][i] + 3*u*u*t*P[1][i] + 3*u*t*t*P[2][i] + t*t*t*P[3][i]); };
+  let lo = 0, hi = 1;
+  for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2, q = at(m); (Math.hypot(x2 - q[0], y2 - q[1]) > AH_L ? lo = m : hi = m); }
+  const tb = (lo + hi) / 2, B = at(tb), lerp = (p, q, t) => [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t];
+  const a1 = lerp(P[0], P[1], tb), b1 = lerp(P[1], P[2], tb), a2 = lerp(a1, b1, tb);
+  el("path", { d: `M${x1},${y1} C${a1} ${a2} ${B}`, fill: "none", stroke: "var(--gold-dim)", "stroke-width": 1.5 });
+  const ux = (x2 - B[0]) / AH_L, uy = (y2 - B[1]) / AH_L, h = AH_W / 2;
+  el("path", { d: `M${x2},${y2} L${B[0] - uy * h},${B[1] + ux * h} L${B[0] + uy * h},${B[1] - ux * h} Z`, fill: "var(--gold-dim)" });
+}
+
+NODES.forEach(drawNode);
+connector(NODES[0], NODES[1]);
+
+
+// ======================================================================
+// Full play diagram for one shuffle in the vertical layout (one panel per node; plays flow down, forks step right)
+// ======================================================================
+const SHUFFLE_2223_7 = {"id": "2223-7", "root": {"s": 0, "w": ["2♥"], "cols": {"a": ["2♠"], "b": ["A♥"]}, "h": {}, "hid": {"b": 1}, "children": [{"play": "A♥b-h", "type": "p1", "node": {"s": 0, "w": ["2♥"], "cols": {"a": ["2♠"], "b": ["A♠"]}, "h": {"♥": ["A♥"]}, "children": [{"play": "2♥w-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": ["2♠"], "b": ["A♠"]}, "h": {"♥": ["A♥", "2♥"]}, "children": [{"play": "A♠b-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": ["2♠"], "b": []}, "h": {"♠": ["A♠"], "♥": ["A♥", "2♥"]}, "children": [{"play": "2♠a-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W4"}}]}}]}}, {"play": "A♠b-h", "type": "p1", "node": {"s": 0, "w": ["2♥"], "cols": {"a": ["2♠"], "b": []}, "h": {"♠": ["A♠"], "♥": ["A♥"]}, "children": [{"play": "2♥w-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": ["2♠"], "b": []}, "h": {"♠": ["A♠"], "♥": ["A♥", "2♥"]}, "children": [{"play": "2♠a-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W4"}}]}}, {"play": "2♠a-h", "type": "p1", "node": {"s": 0, "w": ["2♥"], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥"]}, "children": [{"play": "2♥w-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W4"}}, {"play": "2♥w-a", "type": "p2", "node": {"s": 0, "w": [], "cols": {"a": ["2♥"], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥"]}, "children": [{"play": "2♥a-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W5"}}]}}, {"play": "2♥w-b", "type": "p2", "node": {"s": 0, "w": [], "cols": {"a": [], "b": ["2♥"]}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥"]}, "children": [{"play": "2♥b-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W5"}}]}}]}}, {"play": "2♥w-b", "type": "p2", "node": {"s": 0, "w": [], "cols": {"a": ["2♠"], "b": ["2♥"]}, "h": {"♠": ["A♠"], "♥": ["A♥"]}, "children": [{"play": "2♠a-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": ["2♥"]}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥"]}, "children": [{"play": "2♥b-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W5"}}]}}, {"play": "2♥b-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": ["2♠"], "b": []}, "h": {"♠": ["A♠"], "♥": ["A♥", "2♥"]}, "children": [{"play": "2♠a-h", "type": "p1", "node": {"s": 0, "w": [], "cols": {"a": [], "b": []}, "h": {"♠": ["A♠", "2♠"], "♥": ["A♥", "2♥"]}, "result": "W5"}}]}}]}}]}}]}}]}};
+
+function renderShuffleTree(game, labSvg, svg, nsuits) {
+  const el = (tag, attrs, text, parent = svg) => { const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; parent.appendChild(e); return e; };
+  const colKeys = Object.keys(game.root.cols), suits = SUITS.slice(0, nsuits);
+  const locs = [{ k: "w" }, ...colKeys.map(c => ({ k: "c", col: c })), ...suits.map(s => ({ k: "h", suit: s }))];
+  const locX = []; { let x = PAD_X; locs.forEach((l, i) => { locX[i] = x; const nx = locs[i + 1];
+    x += SW + (!nx ? 0 : (l.k !== nx.k ? GAP_GROUP : GAP_IN)); }); }
+  const PW = locX[locs.length - 1] + SW + PAD_X, FORK_GAP = 26;
+  const idxOf = (loc, suit) => locs.findIndex(l => loc === "w" ? l.k === "w" : loc === "h" ? (l.k === "h" && l.suit === suit) : l.col === loc);
+
+  const down = (n, l) => (n.hid && n.hid[l.col]) || 0;
+  const counter = (n, l) => l.k === "w" ? 1 : l.k === "c" && down(n, l) ? 1 : 0;
+  const pile = (n, l) => l.k === "w" ? n.w : l.k === "c" ? n.cols[l.col] : (n.h[l.suit] || []).slice(-1);
+  const depthOf = (n, l) => Math.max(1, counter(n, l) + pile(n, l).length);
+  const panelH = n => PAD_TOP + SH + (Math.max(...locs.map(l => depthOf(n, l))) - 1) * DY + PAD_BOT;
+  const parse = play => { const m = /^(\S\S)(\w)-(\w)$/.exec(play); return { card: m[1], from: m[2], to: m[3], suit: m[1][1] }; };
+
+  // Layout: depth = play number (rows, downward); fork = column (rightward)
+  let nextFork = 0, maxDepth = 0, gameNo = 0;
+  (function layout(n, d) {
+    n.depth = d; maxDepth = Math.max(maxDepth, d);
+    if (!n.children) { n.fork = nextFork++; n.gid = `${game.id}.${++gameNo}-${n.result}`; return; }
+    n.children.forEach(c => { c.node.parentPlay = c; layout(c.node, d + 1); });
+    n.fork = n.children[0].node.fork;
+  })(game.root, 0);
+  const rowH = Array(maxDepth + 1).fill(0);
+  (function heights(n) { rowH[n.depth] = Math.max(rowH[n.depth], panelH(n)); (n.children || []).forEach(c => heights(c.node)); })(game.root);
+  const TOPM = ID_ABOVE, ROW_GAP = PANEL_GAP + ID_ABOVE;   // room above each row for its node IDs
+  const rowY = []; { let y = TOPM; rowH.forEach((h, d) => { rowY[d] = y; y += h + ROW_GAP; }); }
+  const X = f => f * (PW + FORK_GAP);
+  const RES_H = 16;   // room under the lowest row for result strings
+  const W = X(nextFork) - FORK_GAP, H = rowY[maxDepth] + rowH[maxDepth] + RES_H;
+  svg.setAttribute("width", W); svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+  // Filters (own ids for this diagram)
+  const pre = svg.id + "-";
+  const defs = el("defs", {});
+  const sh = el("filter", { id: pre + "sh", x: "-30%", y: "-30%", width: "160%", height: "160%" }, null, defs);
+  el("feDropShadow", { dx: 0, dy: 2, stdDeviation: 2, "flood-color": "#000", "flood-opacity": 0.5, result: "down" }, null, sh);
+  el("feDropShadow", { in: "SourceGraphic", dx: 0, dy: -0.6, stdDeviation: 2, "flood-color": "#000", "flood-opacity": 0.55, result: "edge" }, null, sh);
+  const shm = el("feMerge", {}, null, sh); el("feMergeNode", { in: "down" }, null, shm); el("feMergeNode", { in: "edge" }, null, shm);
+  [["pick", "#fbfaf5"], ["put", "#bf9000"]].forEach(([nm, color]) => {
+    const f = el("filter", { id: pre + nm, x: "-100%", y: "-10%", width: "300%", height: "120%", "color-interpolation-filters": "sRGB" }, null, defs);
+    el("feGaussianBlur", { in: "SourceAlpha", stdDeviation: GLOW_BLUR, result: "b" }, null, f);
+    el("feFlood", { "flood-color": color, "flood-opacity": 1, result: "c" }, null, f);
+    el("feComposite", { in: "c", in2: "b", operator: "in" }, null, f);
+  });
+  const shadow = `url(#${pre}sh)`;
+  const PHANTOM = { "stroke-dasharray": "10 2 2 2 2 2", "stroke-opacity": 0.6 };
+
+  // Column labels above each fork column
+  const LH = 24;
+  labSvg.setAttribute("width", W); labSvg.setAttribute("height", LH); labSvg.setAttribute("viewBox", `0 0 ${W} ${LH}`);
+  [0].forEach(f => locs.forEach((l, i) => {   // labels over the first fork column only
+    const t = el("text", { x: X(f) + locX[i] + SW / 2, y: LH - 6, "text-anchor": "middle", fill: "var(--chalk)", "font-size": F_LOC, "font-weight": 700 },
+      l.k === "c" ? l.col : l.k === "w" ? "s/w" : "h", labSvg);
+    if (l.k === "h") el("tspan", { dx: 1, dy: -2.6, "font-size": 10 * PT, "font-weight": 400, fill: RED.has(l.suit) ? "var(--red)" : "var(--ink)", style: "font-family: 'PT Mono', monospace" }, l.suit, t);
+  }));
+
+  const emptySlot = (x, y) => el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--felt-dark)", stroke: "var(--slot-line)", "stroke-width": 0.9 });
+  function faceCard(x, y, card) {
+    const g = el("g", { filter: shadow }), ink = RED.has(card[1]) ? "var(--red)" : "var(--ink)";
+    el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--face)" }, null, g);
+    const face = { "text-anchor": "middle", "font-size": F_CARD, fill: ink, stroke: ink, "stroke-width": 0.3, "stroke-linejoin": "round", style: "font-family: var(--card-font)" };
+    el("text", { x: x + 5.63, y: y + RANK_BASE[card[0]], ...face }, card[0], g);
+    el("text", { x: x + 15.36, y: y + SUIT_BASE[card[1]], ...face, "font-size": F_SUIT }, card[1], g);
+  }
+  function counterCard(x, y, n) {
+    if (n === 0) return el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "#7a3c44", stroke: "var(--slot-line)" });
+    const g = el("g", { filter: shadow });
+    el("rect", { x, y, width: SW, height: SH, rx: 2, fill: "var(--back)", stroke: "var(--back-line)" }, null, g);
+    el("text", { x: x + SW / 2, y: y + (SH - OVERLAP) / 2 + 3.9, "text-anchor": "middle", "font-size": F_STOCK, fill: "var(--chalk)" }, n, g);
+  }
+  const cardsTop = y => y + PAD_TOP;
+  // Run of `card` and everything on it, in location (loc, suit), for a node drawn at (x, y)
+  function runSpan(n, x, y, loc, suit, card) {
+    const i = idxOf(loc, suit), l = locs[i], p = pile(n, l), k = Math.max(0, p.indexOf(card)), c = counter(n, l);
+    return { x: x + locX[i], top: cardsTop(y) + (c + k) * DY, bottom: cardsTop(y) + (c + Math.max(p.length, 1) - 1) * DY + SH };
+  }
+  function glow(r, side, kind) {
+    el("rect", { x: r.x + side * GLOW_OFF, y: r.top, width: SW, height: r.bottom - r.top, rx: 2, fill: "#000", filter: `url(#${pre}${kind})`, "pointer-events": "none" });
+  }
+
+  function drawPanel(n, x, y, dup, pick, forkNo) {
+    // Fork copies: no border, their own fill colour
+    el("rect", { x, y, width: PW, height: panelH(n), rx: 8, fill: dup ? "#456d5f" : "var(--felt)" });
+    if (dup) {
+      // Fork copy label: origin node ID + .f<n> (n = 1st, 2nd, … fork from that node), in muted colours
+      const id = el("text", { x: x + locX[0], y: y - 4, "font-size": F_ID, fill: "#aeaeae" });
+      el("tspan", { fill: "#c4ac70" }, pad(n.fork + 1, 2), id); el("tspan", {}, "-" + pad(n.depth, 3) + ".f" + forkNo, id);
+    }
+    if (!dup) {
+      // Node ID: plain text just above the panel (mirrors the result line below the final node)
+      const id = el("text", { x: x + locX[0], y: y - 4, "font-size": F_ID, fill: "var(--chalk)" });
+      el("tspan", { fill: "var(--gold)" }, pad(n.fork + 1, 2), id); el("tspan", {}, "-" + pad(n.depth, 3), id);
+      if (n.result) {   // full game ID just below the final node, same size as the node ID; the W/L part in gold, no shadow
+        const r = el("text", { x: x + locX[0], y: y + panelH(n) + 11, "font-size": F_ID, fill: "var(--chalk)" });
+        el("tspan", {}, n.gid.slice(0, -n.result.length), r); el("tspan", { fill: "var(--gold)" }, n.result, r);
+      }
+    }
+    if (pick) { const p = parse(pick.play); glow(runSpan(n, x, y, p.from, p.suit, p.card), +1, "pick"); }
+    if (!dup && n.parentPlay) { const p = parse(n.parentPlay.play); glow(runSpan(n, x, y, p.to, p.suit, p.card), -1, "put"); }
+    locs.forEach((l, i) => {
+      const cx = x + locX[i], top = cardsTop(y), p = pile(n, l);
+      if (!p.length && !counter(n, l)) return emptySlot(cx, top);
+      let j = 0;
+      if (l.k === "w") { counterCard(cx, top, n.s); j = 1; }
+      else if (counter(n, l)) { counterCard(cx, top, down(n, l)); j = 1; }
+      p.forEach((card, k) => faceCard(cx, top + (j + k) * DY, card));
+    });
+  }
+
+  // Connector: bottom of the picked-up run (source node) → top of the destination column (next node)
+  const AH_L = 9, AH_W = 6.3, DASH = 3, DGAP = 2.5;
+  function connector(c, srcNode, sx, sy, dstNode, dx, dy) {
+    const p = parse(c.play);
+    const r = runSpan(srcNode, sx, sy, p.from, p.suit, p.card);
+    const x1 = r.x + SW / 2, y1 = r.bottom + 1;
+    const x2 = dx + locX[idxOf(p.to, p.suit)] + SW / 2, y2 = cardsTop(dy) - 1;
+    const k = (y2 - y1) * 0.6, P = [[x1, y1], [x1, y1 + k], [x2, y2 - k], [x2, y2]];
+    const at = t => { const u = 1 - t; return [0, 1].map(i => u*u*u*P[0][i] + 3*u*u*t*P[1][i] + 3*u*t*t*P[2][i] + t*t*t*P[3][i]); };
+    let lo = 0, hi = 1;
+    for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2, q = at(m); (Math.hypot(x2 - q[0], y2 - q[1]) > AH_L ? lo = m : hi = m); }
+    const tb = (lo + hi) / 2, B = at(tb), lerp = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+    const a1 = lerp(P[0], P[1], tb), b1 = lerp(P[1], P[2], tb), a2 = lerp(a1, b1, tb);
+    let len = 0, prev = P[0];
+    for (let i = 1; i <= 64; i++) { const q = at(tb * i / 64); len += Math.hypot(q[0] - prev[0], q[1] - prev[1]); prev = q; }
+    const deg = /^p(\d+)$/.test(c.type) ? Number(c.type.slice(1)) : 1;   // p² etc.: n short dashes mid-line
+    let dash = null;
+    if (deg >= 2) { const mid = deg * DASH + (deg + 1) * DGAP, lead = Math.max(0, (len - mid) / 2);
+      dash = [lead, ...Array.from({ length: deg }, () => [DGAP, DASH]).flat(), DGAP, len].join(" "); }
+    el("path", { d: `M${x1},${y1} C${a1} ${a2} ${B}`, fill: "none", stroke: "var(--gold-dim)", "stroke-width": 1.5, ...(dash ? { "stroke-dasharray": dash } : {}) });
+    const ux = (x2 - B[0]) / AH_L, uy = (y2 - B[1]) / AH_L, h = AH_W / 2;
+    el("path", { d: `M${x2},${y2} L${B[0] - uy * h},${B[1] + ux * h} L${B[0] + uy * h},${B[1] - ux * h} Z`, fill: "var(--gold-dim)" });
+  }
+
+  // Fork lines go underneath the panels; panels next; play connectors on top
+  const under = el("g", {});
+  const links = [];
+  (function draw(n) {
+    const x = X(n.fork), y = rowY[n.depth];
+    drawPanel(n, x, y, false, n.children ? n.children[0] : null);
+    let prevRight = x + PW, forkNo = 0;   // fork chain: original → 1st copy → 2nd copy → … (true fork structure stays in the data)
+    (n.children || []).forEach(c => {
+      const cx = X(c.node.fork), cy = rowY[c.node.depth];
+      if (c.node.fork === n.fork) links.push(() => connector(c, n, x, y, c.node, cx, cy));
+      else {
+        drawPanel(n, cx, y, true, c, ++forkNo);
+        const ly = y + PAD_TOP + SH / 2;
+        el("path", { d: `M${prevRight},${ly} H${cx}`, fill: "none", stroke: "var(--chalk)", "stroke-width": 1, ...PHANTOM }, null, under);
+        prevRight = cx + PW;
+        links.push(() => connector(c, n, cx, y, c.node, cx, cy));
+      }
+      draw(c.node);
+    });
+  })(game.root);
+  links.forEach(f => f());
+}
+renderShuffleTree(JSON.parse(JSON.stringify(SHUFFLE_2223_7)), document.getElementById("labels2223"), document.getElementById("tree2223"), 2);
+
+// Zoom: scales the page content independently of the browser; remembered per viewer
+const zoomSel = document.getElementById("zoom"), mainEl = document.querySelector("main");
+const applyZoom = v => { mainEl.style.zoom = v / 100; };
+try { const saved = localStorage.getItem("zoom"); if (saved && zoomSel.querySelector(`option[value="${saved}"]`)) zoomSel.value = saved; } catch (e) {}
+applyZoom(zoomSel.value);
+zoomSel.addEventListener("change", () => { applyZoom(zoomSel.value); try { localStorage.setItem("zoom", zoomSel.value); } catch (e) {} });
+</script>

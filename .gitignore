@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+# Generated solver output (regenerate with solver/solitaire-solver3.py)
+data/games-3223.txt
+data/generated/
+*.tree.json

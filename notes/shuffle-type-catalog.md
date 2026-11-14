@@ -34,14 +34,14 @@ Tool: `solver/shuffle_types.py <solver-output.json>` computes the D, O and T cha
 
 ## H — Relationships found (hypotheses and their status)
 
-| ID | Relationship | A113 | 2113 | 3113 | 4113* | 2223 | 3223 |
-|---|---|---|---|---|---|---|---|
-| H1 | **O1 ≥ number of cards + D1** for winnable shuffles (each blocking card costs at least one detour) | = 1/1 | = 2/2 | = 4/4 | = 7/7 | = 12/12 | **≥ holds 293/293; equality 249/293 (85%)** |
-| H2 | Within a shuffle type, shuffles differ only in O2 (play-order freedom), never in O1, O3 or the set of results | — | — | — | — | holds | **holds 164/164 types** |
-| H3 | O2 rises with early freedom: a column empties at once (D2), and cards that are playable straight away | — | — | — | — | trend | D2: avg 61.7 vs 28.3 games ✓. Top waste card A / 2 / 3: avg 59.2 / 32.2 / 26.8 games (the 2223 reading "a 2 in the waste" was really "early freedom") |
-| H4 | **Winnability rises with D4 (aces exposed at the deal)** | — | — | — | — | all winnable | **D4 = 2: 72/72 winnable; D4 = 1: 191/216; D4 = 0: 30/72** |
-| H5 | Fewer blocking cards (D1) → more winnable shuffles and more games | — | — | — | — | — | D1 0 / 1 / 2 / 3: winnable 131/138, 132/174, 28/42, 2/6; avg games 65.9 / 26.6 / 10.8 / 3.5 |
-| H6 | **Choices can decide W vs L** (a node where one play keeps a win possible and another leads only to losses) | never | never | never | never | never | **first seen: 56 shuffles have both winning and losing games. At those nodes every losing play was p¹; the winning alternative was p¹ (121) or p² (13). E.g. 3223-12: `3♠w-h` (p¹, straight home) loses; `3♠w-a` (p², detour) is the only way to win** |
+| ID | Relationship | A113 | 2113 | 3113 | 4113* | 2223 | 3223 | 6223 (sample 10k) | 6233 (sample 10k) |
+|---|---|---|---|---|---|---|---|---|---|
+| H1 | **O1 ≥ number of cards + D1** for winnable shuffles (each blocking card costs at least one detour) | = 1/1 | = 2/2 | = 4/4 | = 7/7 | = 12/12 | **≥ holds 293/293; equality 249/293 (85%)** | ≥ holds 4,925/4,925; equality 27% | ≥ holds 5,951/5,951; equality 23% |
+| H2 | Within a shuffle type, shuffles differ only in O2 (play-order freedom), never in O1, O3 or the set of results | — | — | — | — | holds | **holds 164/164 types** | not measured (needs lines) | not measured |
+| H3 | O2 rises with early freedom: a column empties at once (D2), and cards that are playable straight away | — | — | — | — | trend | D2: avg 61.7 vs 28.3 games ✓. Top waste card A / 2 / 3: avg 59.2 / 32.2 / 26.8 games (the 2223 reading "a 2 in the waste" was really "early freedom") | D2: median games 1,554 vs 37 ✓. Waste top A: median ~5,000 games; 2: 375–576; 3–5: 5–31; 6 (high card): 7–45 | D2: median 9,453 vs 2,103 ✓. Waste top A: median 31,000–41,000; 5: 54–306 |
+| H4 | **Winnability rises with D4 (aces exposed at the deal)** | — | — | — | — | all winnable | **D4 = 2: 72/72 winnable; D4 = 1: 191/216; D4 = 0: 30/72** | D4 0 / 1 / 2: winnable 34% / 65% / 90% (±1–3) ✓ trend, not a rule | D4 0 / 1 / 2: 45% / 69% / 85% ✓ trend |
+| H5 | Fewer blocking cards (D1) → more winnable shuffles and more games | — | — | — | — | — | D1 0 / 1 / 2 / 3: winnable 131/138, 132/174, 28/42, 2/6; avg games 65.9 / 26.6 / 10.8 / 3.5 | D1 0 / 1 / 2 / 3: winnable 70% / 43% / 28% / 21%; median games 2,629 / 25 / 5 / 3 ✓ | D1 0–4: 81% / 62% / 51% / 50% / 39%; median games 25,123 / 4,096 / 406 / 188 / 15 ✓ |
+| H6 | **Choices can decide W vs L** (a node where one play keeps a win possible and another leads only to losses) | never | never | never | never | never | **first seen: 56 shuffles have both winning and losing games. At those nodes every losing play was p¹; the winning alternative was p¹ (121) or p² (13). E.g. 3223-12: `3♠w-h` (p¹, straight home) loses; `3♠w-a` (p², detour) is the only way to win** | not measured (needs lines) | not measured |
 
 Notes:
 - H1: where it is not an equality (44 shuffles, 3223), the blocking card's detour needs somewhere to go: only the high card can fill an empty column, so a lower blocker needs an opposite-colour card one rank higher on the tableau, and placing that card can cost extra plays. The exact cost is not yet captured by a deal characteristic (blocker rank alone does not explain all 44)
@@ -71,6 +71,7 @@ Notes:
 ---
 
 ## Change log
+- 2026-11-14 — 6223 and 6233 discovery samples (10,000 each): H1 lower bound holds in every winnable shuffle; H3, H4, H5 trends hold. D1 does not yet count the stock
 - 2026-11-14 — D1–D4 now also computed directly from the deal (`solver/sampling.py`); they reproduce every 3223 figure for H1, H4 and H5
 - 2026-11-14 — 3223 analysed (360 shuffles, 164 types). H1 restated as a lower bound (exact in 85% of 3223). H3 reinterpreted as early freedom. Added H4 (aces exposed → winnable), H5 (blocking cards), H6 (deciding choices; first seen in 3223)
 - 2026-11-14 — Catalog started from the 2223 analysis (T1–T3, D1–D4, O1–O4, H1–H3). D1 generalised to any pile after 3223-1

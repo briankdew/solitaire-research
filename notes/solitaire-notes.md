@@ -340,6 +340,26 @@ Build a knowledge base of played games for analysis.
 - All 360: SH 360 · GM 14,191 · W 13,968 · L 223 · winnable shuffles 293 · 164 shuffle types (see the shuffle-type catalog)
 - First setup where a choice can lose a winnable game (56 shuffles)
 
+### 6223 and 6233 (limited cognates; discovery samples of 10,000)
+- Same 12 cards (A–6 ♠♥), draw 3; 239,500,800 shuffles each after mirrors. Sampled with `solver/sampling.py` (seeds 6223001, 6233001); tables `data/sample-6223-discovery.csv`, `data/sample-6233-discovery.csv`; summary by `solver/summarize.py`. No repeated shuffle in either sample
+- 6223: 2 columns (a 1 card; b 1 down + 1 up), waste 3, stock 6 · 6233: 3 columns (a 1; b 1 down + 1; c 2 down + 1), waste 3, stock 3
+- Margins are 95% intervals
+
+| | 6223 | 6233 |
+|---|---|---|
+| Winnable shuffles | 49.2% (48.3–50.2) | 59.5% (58.5–60.5) |
+| Shuffles with a losing game | 95.8% | 80.9% |
+| Every game won | 4.2% | 19.1% |
+| Games per shuffle: median | 86 (68–109) | 2,935 (2,416–3,518) |
+| Games per shuffle: 90th percentile | 35,862 | 466,416 |
+| Games per shuffle: mean / max | 14,471 / 997,424 | 282,179 / 50,894,877 |
+| Share of all games won | 99.1% | 99.9% |
+| Fewest plays (winnable): mean, range | 14.2, 12–21 | 15.3, 12–22 |
+| No play possible after the deal | 12.4% | 7.6% |
+
+- The longest game per shuffle is bimodal: either the game stalls within a few plays, or it runs 16–22 plays
+- Most games are won even in shuffles that can be lost: losing games are few but spread over most shuffles
+
 ### Pattern so far (single suit, 1 column, draw 3)
 | Setup | SH | GM | W | L | Winnable shuffles |
 |---|---|---|---|---|---|
